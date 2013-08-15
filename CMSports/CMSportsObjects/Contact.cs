@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CMSportsObjects
 {
-    public class Organisation
+    public class Contact
     {
-        private string name;
         private Address address;
-        private int size;
-        private List<Contact> contacts;
-
+        private string email;
+        private string homePhone;
+        private string name;
+        private string workPhone;
+    
         public string Name
         {
             get
@@ -35,7 +35,7 @@ namespace CMSportsObjects
             }
         }
 
-        public int Size
+        public string Email
         {
             get
             {
@@ -46,7 +46,18 @@ namespace CMSportsObjects
             }
         }
 
-        public List<Contact> Contacts
+        public string HomePhone
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public string WorkPhone
         {
             get
             {

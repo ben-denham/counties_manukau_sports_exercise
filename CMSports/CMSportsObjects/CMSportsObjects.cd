@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CMSportsObjects.Organisation">
+    <Position X="1.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAQAAAAAgAAAAIAAAAQAAAIEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Organisation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMSportsObjects.Contact">
+    <Position X="6" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAACAgAAAAAAQAAAJEAAACQAAAAAAAAAA=</HashCode>
+      <FileName>Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CMSportsObjects.Address">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
