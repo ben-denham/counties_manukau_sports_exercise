@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMSportsObjects
 {
-    public class Class1
+    public class Organisation
     {
     }
 }
