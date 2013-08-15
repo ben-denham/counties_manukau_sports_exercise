@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSports", "CMSports\CMSports.csproj", "{F87873C9-86E3-427A-89D6-3B7B5D972526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSportsObjects", "CMSportsObjects\CMSportsObjects.csproj", "{226B6EB6-A6ED-47DA-9B36-AA75DD1521E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F87873C9-86E3-427A-89D6-3B7B5D972526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F87873C9-86E3-427A-89D6-3B7B5D972526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F87873C9-86E3-427A-89D6-3B7B5D972526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226B6EB6-A6ED-47DA-9B36-AA75DD1521E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226B6EB6-A6ED-47DA-9B36-AA75DD1521E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226B6EB6-A6ED-47DA-9B36-AA75DD1521E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226B6EB6-A6ED-47DA-9B36-AA75DD1521E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
