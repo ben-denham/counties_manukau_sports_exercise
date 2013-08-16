@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CMSportsObjects;
 
-namespace CMSports
+namespace CMSportsControls
 {
-    public partial class Form1 : Form
+    public partial class AddressControl: UserControl
     {
-        public Form1()
+        public AddressControl()
         {
             InitializeComponent();
         }
