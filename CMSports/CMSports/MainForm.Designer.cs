@@ -78,9 +78,9 @@
             // 
             // organisationSaveButton
             // 
-            this.organisationSaveButton.Location = new System.Drawing.Point(415, 603);
+            this.organisationSaveButton.Location = new System.Drawing.Point(423, 603);
             this.organisationSaveButton.Name = "organisationSaveButton";
-            this.organisationSaveButton.Size = new System.Drawing.Size(111, 23);
+            this.organisationSaveButton.Size = new System.Drawing.Size(108, 23);
             this.organisationSaveButton.TabIndex = 8;
             this.organisationSaveButton.Text = "&Save Organisation";
             this.organisationSaveButton.UseVisualStyleBackColor = true;
@@ -137,9 +137,9 @@
             // 
             // organisationDeleteButton
             // 
-            this.organisationDeleteButton.Location = new System.Drawing.Point(532, 603);
+            this.organisationDeleteButton.Location = new System.Drawing.Point(537, 603);
             this.organisationDeleteButton.Name = "organisationDeleteButton";
-            this.organisationDeleteButton.Size = new System.Drawing.Size(116, 23);
+            this.organisationDeleteButton.Size = new System.Drawing.Size(108, 23);
             this.organisationDeleteButton.TabIndex = 9;
             this.organisationDeleteButton.Text = "&Delete Organisation";
             this.organisationDeleteButton.UseVisualStyleBackColor = true;
@@ -170,10 +170,12 @@
             // 
             // MainForm
             // 
+            this.AcceptButton = this.organisationSaveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 660);
             this.Controls.Add(this.mainTabControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.Text = "Counties Manukau Sports";
             this.mainTabControl.ResumeLayout(false);

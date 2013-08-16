@@ -48,7 +48,7 @@ namespace CMSportsObjects
             {
                 string regex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$";
                 if (!Regex.IsMatch(value, @regex, RegexOptions.IgnoreCase)) {
-                    throw new NotImplementedException("The email address you entered is not valid.");
+                    throw new ArgumentException("The email address you entered is not valid.");
                 }
                 email = value;
             }
