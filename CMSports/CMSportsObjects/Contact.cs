@@ -17,10 +17,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return name;
             }
             set
             {
+                name = value;
             }
         }
 
@@ -28,10 +29,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return address;
             }
             set
             {
+                address = value;
             }
         }
 
@@ -39,10 +41,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return email;
             }
             set
             {
+                email = value;
             }
         }
 
@@ -50,10 +53,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return homePhone;
             }
             set
             {
+                homePhone = value;
             }
         }
 
@@ -61,10 +65,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return workPhone;
             }
             set
             {
+                workPhone = value;
             }
         }
     }

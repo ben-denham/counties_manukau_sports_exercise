@@ -16,10 +16,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return streetName;
             }
             set
             {
+                streetName = value;
             }
         }
 
@@ -27,10 +28,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return streetNumber;
             }
             set
             {
+                streetNumber = value;
             }
         }
 
@@ -38,10 +40,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return suburb;
             }
             set
             {
+                suburb = value;
             }
         }
 
@@ -49,10 +52,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return postcode;
             }
             set
             {
+                postcode = value;
             }
         }
     }

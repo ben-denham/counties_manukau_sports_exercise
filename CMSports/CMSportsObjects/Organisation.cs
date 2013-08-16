@@ -18,10 +18,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return name;
             }
             set
             {
+                name = value;
             }
         }
 
@@ -29,10 +30,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return address;
             }
             set
             {
+                address = value;
             }
         }
 
@@ -40,10 +42,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return size;
             }
             set
             {
+                size = value;
             }
         }
 
@@ -51,10 +54,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return contacts;
             }
             set
             {
+                contacts = value;
             }
         }
 
@@ -62,10 +66,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return events;
             }
             set
             {
+                events = value;
             }
         }
     }
