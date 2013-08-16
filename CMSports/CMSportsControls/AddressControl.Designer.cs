@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.addressGroupBox = new System.Windows.Forms.GroupBox();
             this.streetNameLabel = new System.Windows.Forms.Label();
             this.streetNameTextBox = new System.Windows.Forms.TextBox();
@@ -138,7 +137,6 @@
 
         #endregion
 
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox addressGroupBox;
         private System.Windows.Forms.TextBox streetNoTextBox;
         private System.Windows.Forms.Label streetNoLabel;

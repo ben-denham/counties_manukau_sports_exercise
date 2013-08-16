@@ -47,12 +47,21 @@
     <Compile Include="AddressControl.Designer.cs">
       <DependentUpon>AddressControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContactsControl.Designer.cs">
+      <DependentUpon>ContactsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddressControl.resx">
       <DependentUpon>AddressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactsControl.resx">
+      <DependentUpon>ContactsControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
