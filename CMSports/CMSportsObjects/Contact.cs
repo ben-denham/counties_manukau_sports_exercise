@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CMSportsObjects
 {
@@ -45,6 +46,10 @@ namespace CMSportsObjects
             }
             set
             {
+                string regex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$";
+                if (!Regex.IsMatch(value, @regex, RegexOptions.IgnoreCase)) {
+                    throw new NotImplementedException("The email address you entered is not valid.");
+                }
                 email = value;
             }
         }
