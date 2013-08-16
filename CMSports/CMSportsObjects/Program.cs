@@ -5,14 +5,14 @@ using System.Text;
 
 namespace CMSportsObjects
 {
-    public struct Address
+    public class Program
     {
-        private string streetName;
-        private string streetNumber;
-        private string suburb;
-        private int postcode;
+        private string name;
+        private string description;
+        private Contact programLeader;
+        private List<Event> events;
 
-        public string StreetName
+        public string Name
         {
             get
             {
@@ -23,7 +23,7 @@ namespace CMSportsObjects
             }
         }
 
-        public string StreetNumber
+        public string Description
         {
             get
             {
@@ -34,7 +34,7 @@ namespace CMSportsObjects
             }
         }
 
-        public string Suburb
+        public Contact ProgramLeader
         {
             get
             {
@@ -45,7 +45,7 @@ namespace CMSportsObjects
             }
         }
 
-        public int Postcode
+        public List<Event> Events
         {
             get
             {

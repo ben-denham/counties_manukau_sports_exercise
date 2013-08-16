@@ -12,6 +12,7 @@ namespace CMSportsObjects
         private Address address;
         private int size;
         private List<Contact> contacts;
+        private List<Event> events;
 
         public string Name
         {
@@ -47,6 +48,17 @@ namespace CMSportsObjects
         }
 
         public List<Contact> Contacts
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public List<Event> Events
         {
             get
             {

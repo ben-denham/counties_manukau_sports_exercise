@@ -1,23 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="CMSportsObjects.Organisation">
-    <Position X="1.75" Y="1" Width="2.25" />
+    <Position X="0.75" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>BAAAAAQAAAAAgAAAAIAAAAQAAAIEAAACAAAAAAAAAAA=</HashCode>
+      <HashCode>BAAAAAQAAAAAgAAAAIAAAAQAAgIEAAICAAAAAAAAAAA=</HashCode>
       <FileName>Organisation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CMSportsObjects.Contact">
-    <Position X="6" Y="1.25" Width="2.5" />
+    <Position X="4.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAICAAACAgAAAAAAQAAAJEAAACQAAAAAAAAAA=</HashCode>
       <FileName>Contact.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="CMSportsObjects.Address">
-    <Position X="10" Y="2" Width="1.5" />
+  <Class Name="CMSportsObjects.School">
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMSportsObjects.Club">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Club.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMSportsObjects.Event">
+    <Position X="10.75" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAQCAAIEAAADQAAAAUAAAAA=</HashCode>
+      <FileName>Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMSportsObjects.Program">
+    <Position X="7.75" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAAAAAQAAgAEAAIAAAAIAAAACAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="CMSportsObjects.Address">
+    <Position X="7.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAiAAAAIgAAAAIAAAAAAAAAIAAAAAIA=</HashCode>
       <FileName>Address.cs</FileName>
     </TypeIdentifier>
   </Struct>
