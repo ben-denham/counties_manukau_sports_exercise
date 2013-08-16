@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.addressGroupBox = new System.Windows.Forms.GroupBox();
-            this.streetNameLabel = new System.Windows.Forms.Label();
-            this.streetNameTextBox = new System.Windows.Forms.TextBox();
-            this.streetNoTextBox = new System.Windows.Forms.TextBox();
-            this.streetNoLabel = new System.Windows.Forms.Label();
+            this.postcodeTextBox = new System.Windows.Forms.TextBox();
+            this.postcodeLabel = new System.Windows.Forms.Label();
             this.suburbTextBox = new System.Windows.Forms.TextBox();
             this.suburbLabel = new System.Windows.Forms.Label();
-            this.postCodeTextBox = new System.Windows.Forms.TextBox();
-            this.postCodeLabel = new System.Windows.Forms.Label();
+            this.streetNoTextBox = new System.Windows.Forms.TextBox();
+            this.streetNoLabel = new System.Windows.Forms.Label();
+            this.streetNameTextBox = new System.Windows.Forms.TextBox();
+            this.streetNameLabel = new System.Windows.Forms.Label();
             this.addressGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addressGroupBox
             // 
-            this.addressGroupBox.Controls.Add(this.postCodeTextBox);
-            this.addressGroupBox.Controls.Add(this.postCodeLabel);
+            this.addressGroupBox.Controls.Add(this.postcodeTextBox);
+            this.addressGroupBox.Controls.Add(this.postcodeLabel);
             this.addressGroupBox.Controls.Add(this.suburbTextBox);
             this.addressGroupBox.Controls.Add(this.suburbLabel);
             this.addressGroupBox.Controls.Add(this.streetNoTextBox);
@@ -58,37 +58,21 @@
             this.addressGroupBox.TabStop = false;
             this.addressGroupBox.Text = "&Address";
             // 
-            // streetNameLabel
+            // postcodeTextBox
             // 
-            this.streetNameLabel.AutoSize = true;
-            this.streetNameLabel.Location = new System.Drawing.Point(6, 55);
-            this.streetNameLabel.Name = "streetNameLabel";
-            this.streetNameLabel.Size = new System.Drawing.Size(66, 13);
-            this.streetNameLabel.TabIndex = 4;
-            this.streetNameLabel.Text = "S&treet Name";
+            this.postcodeTextBox.Location = new System.Drawing.Point(154, 32);
+            this.postcodeTextBox.Name = "postcodeTextBox";
+            this.postcodeTextBox.Size = new System.Drawing.Size(173, 20);
+            this.postcodeTextBox.TabIndex = 3;
             // 
-            // streetNameTextBox
+            // postcodeLabel
             // 
-            this.streetNameTextBox.Location = new System.Drawing.Point(9, 71);
-            this.streetNameTextBox.Name = "streetNameTextBox";
-            this.streetNameTextBox.Size = new System.Drawing.Size(318, 20);
-            this.streetNameTextBox.TabIndex = 5;
-            // 
-            // streetNoTextBox
-            // 
-            this.streetNoTextBox.Location = new System.Drawing.Point(9, 32);
-            this.streetNoTextBox.Name = "streetNoTextBox";
-            this.streetNoTextBox.Size = new System.Drawing.Size(139, 20);
-            this.streetNoTextBox.TabIndex = 1;
-            // 
-            // streetNoLabel
-            // 
-            this.streetNoLabel.AutoSize = true;
-            this.streetNoLabel.Location = new System.Drawing.Point(6, 16);
-            this.streetNoLabel.Name = "streetNoLabel";
-            this.streetNoLabel.Size = new System.Drawing.Size(55, 13);
-            this.streetNoLabel.TabIndex = 0;
-            this.streetNoLabel.Text = "Street N&o.";
+            this.postcodeLabel.AutoSize = true;
+            this.postcodeLabel.Location = new System.Drawing.Point(151, 16);
+            this.postcodeLabel.Name = "postcodeLabel";
+            this.postcodeLabel.Size = new System.Drawing.Size(52, 13);
+            this.postcodeLabel.TabIndex = 2;
+            this.postcodeLabel.Text = "&Postcode";
             // 
             // suburbTextBox
             // 
@@ -106,21 +90,37 @@
             this.suburbLabel.TabIndex = 6;
             this.suburbLabel.Text = "S&uburb";
             // 
-            // postCodeTextBox
+            // streetNoTextBox
             // 
-            this.postCodeTextBox.Location = new System.Drawing.Point(154, 32);
-            this.postCodeTextBox.Name = "postCodeTextBox";
-            this.postCodeTextBox.Size = new System.Drawing.Size(173, 20);
-            this.postCodeTextBox.TabIndex = 3;
+            this.streetNoTextBox.Location = new System.Drawing.Point(9, 32);
+            this.streetNoTextBox.Name = "streetNoTextBox";
+            this.streetNoTextBox.Size = new System.Drawing.Size(139, 20);
+            this.streetNoTextBox.TabIndex = 1;
             // 
-            // postCodeLabel
+            // streetNoLabel
             // 
-            this.postCodeLabel.AutoSize = true;
-            this.postCodeLabel.Location = new System.Drawing.Point(151, 16);
-            this.postCodeLabel.Name = "postCodeLabel";
-            this.postCodeLabel.Size = new System.Drawing.Size(56, 13);
-            this.postCodeLabel.TabIndex = 2;
-            this.postCodeLabel.Text = "&Post Code";
+            this.streetNoLabel.AutoSize = true;
+            this.streetNoLabel.Location = new System.Drawing.Point(6, 16);
+            this.streetNoLabel.Name = "streetNoLabel";
+            this.streetNoLabel.Size = new System.Drawing.Size(55, 13);
+            this.streetNoLabel.TabIndex = 0;
+            this.streetNoLabel.Text = "Street N&o.";
+            // 
+            // streetNameTextBox
+            // 
+            this.streetNameTextBox.Location = new System.Drawing.Point(9, 71);
+            this.streetNameTextBox.Name = "streetNameTextBox";
+            this.streetNameTextBox.Size = new System.Drawing.Size(318, 20);
+            this.streetNameTextBox.TabIndex = 5;
+            // 
+            // streetNameLabel
+            // 
+            this.streetNameLabel.AutoSize = true;
+            this.streetNameLabel.Location = new System.Drawing.Point(6, 55);
+            this.streetNameLabel.Name = "streetNameLabel";
+            this.streetNameLabel.Size = new System.Drawing.Size(66, 13);
+            this.streetNameLabel.TabIndex = 4;
+            this.streetNameLabel.Text = "S&treet Name";
             // 
             // AddressControl
             // 
@@ -142,8 +142,8 @@
         private System.Windows.Forms.Label streetNoLabel;
         private System.Windows.Forms.TextBox streetNameTextBox;
         private System.Windows.Forms.Label streetNameLabel;
-        private System.Windows.Forms.TextBox postCodeTextBox;
-        private System.Windows.Forms.Label postCodeLabel;
+        private System.Windows.Forms.TextBox postcodeTextBox;
+        private System.Windows.Forms.Label postcodeLabel;
         private System.Windows.Forms.TextBox suburbTextBox;
         private System.Windows.Forms.Label suburbLabel;
     }

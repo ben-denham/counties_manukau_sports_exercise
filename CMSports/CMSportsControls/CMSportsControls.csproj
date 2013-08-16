@@ -64,6 +64,12 @@
       <DependentUpon>ContactsControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMSportsObjects\CMSportsObjects.csproj">
+      <Project>{226b6eb6-a6ed-47da-9b36-aa75dd1521e7}</Project>
+      <Name>CMSportsObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

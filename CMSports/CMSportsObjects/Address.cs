@@ -12,6 +12,14 @@ namespace CMSportsObjects
         private string suburb;
         private int postcode;
 
+        public Address(string streetName, string streetNumber, string suburb, int postcode)
+        {
+            this.streetName = streetName;
+            this.streetNumber = streetNumber;
+            this.suburb = suburb;
+            this.postcode = postcode;
+        }
+
         public string StreetName
         {
             get
@@ -58,6 +66,11 @@ namespace CMSportsObjects
             {
                 postcode = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return StreetNumber + " " + StreetName + ", " + Suburb + " " + Postcode;
         }
     }
 }

@@ -8,11 +8,20 @@ namespace CMSportsObjects
 {
     public class Contact
     {
-        private Address address;
-        private string email;
-        private string homePhone;
         private string name;
+        private string email;
+        private Address address;
+        private string homePhone;
         private string workPhone;
+
+        public Contact(string name, string email, Address address, string homePhone, string workPhone)
+        {
+            Name = name;
+            Email = email;
+            Address = address;
+            HomePhone = homePhone;
+            WorkPhone = workPhone;
+        }
     
         public string Name
         {

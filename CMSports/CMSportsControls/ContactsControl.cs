@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CMSportsObjects;
 
 namespace CMSportsControls
 {
@@ -15,6 +16,24 @@ namespace CMSportsControls
         public ContactsControl()
         {
             InitializeComponent();
+        }
+
+        public void Clear()
+        {
+            contactsListView.Items.Clear();
+        }
+
+        public void Populate(List<Contact> contacts)
+        {
+            foreach (Contact contact in contacts)
+            {
+                ListViewItem listItem = new ListViewItem(contact.Name);
+                listItem.SubItems.Add(contact.Email);
+                listItem.SubItems.Add(contact.Address.ToString());
+                listItem.SubItems.Add(contact.HomePhone);
+                listItem.SubItems.Add(contact.WorkPhone);
+                contactsListView.Items.Add(listItem);
+            }
         }
     }
 }
