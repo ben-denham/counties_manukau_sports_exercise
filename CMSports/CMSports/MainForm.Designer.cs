@@ -30,6 +30,12 @@
         {
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.organisationsTabPage = new System.Windows.Forms.TabPage();
+            this.organisationTypeTextBox = new System.Windows.Forms.TextBox();
+            this.organisationTypeLabel = new System.Windows.Forms.Label();
+            this.organisationListView = new System.Windows.Forms.ListView();
+            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.typeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.newClubButton = new System.Windows.Forms.Button();
             this.newSchoolButton = new System.Windows.Forms.Button();
             this.organisationEventsGroupBox = new System.Windows.Forms.GroupBox();
@@ -40,14 +46,8 @@
             this.organisationSizeLabel = new System.Windows.Forms.Label();
             this.organisationNameTextBox = new System.Windows.Forms.TextBox();
             this.organisationNameLabel = new System.Windows.Forms.Label();
-            this.organisationListView = new System.Windows.Forms.ListView();
-            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.typeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.organisationContacts = new CMSportsControls.ContactsControl();
             this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
-            this.organisationTypeTextBox = new System.Windows.Forms.TextBox();
-            this.organisationTypeLabel = new System.Windows.Forms.Label();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
             this.organisationEventsGroupBox.SuspendLayout();
@@ -87,6 +87,55 @@
             this.organisationsTabPage.Text = "Organisations";
             this.organisationsTabPage.UseVisualStyleBackColor = true;
             // 
+            // organisationTypeTextBox
+            // 
+            this.organisationTypeTextBox.Location = new System.Drawing.Point(498, 32);
+            this.organisationTypeTextBox.Name = "organisationTypeTextBox";
+            this.organisationTypeTextBox.ReadOnly = true;
+            this.organisationTypeTextBox.Size = new System.Drawing.Size(233, 20);
+            this.organisationTypeTextBox.TabIndex = 14;
+            // 
+            // organisationTypeLabel
+            // 
+            this.organisationTypeLabel.AutoSize = true;
+            this.organisationTypeLabel.Location = new System.Drawing.Point(395, 35);
+            this.organisationTypeLabel.Name = "organisationTypeLabel";
+            this.organisationTypeLabel.Size = new System.Drawing.Size(93, 13);
+            this.organisationTypeLabel.TabIndex = 13;
+            this.organisationTypeLabel.Text = "Organisation Type";
+            // 
+            // organisationListView
+            // 
+            this.organisationListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.nameColumnHeader,
+            this.typeColumnHeader,
+            this.sizeColumnHeader});
+            this.organisationListView.Dock = System.Windows.Forms.DockStyle.Left;
+            this.organisationListView.FullRowSelect = true;
+            this.organisationListView.Location = new System.Drawing.Point(3, 3);
+            this.organisationListView.MultiSelect = false;
+            this.organisationListView.Name = "organisationListView";
+            this.organisationListView.Size = new System.Drawing.Size(389, 679);
+            this.organisationListView.TabIndex = 12;
+            this.organisationListView.UseCompatibleStateImageBehavior = false;
+            this.organisationListView.View = System.Windows.Forms.View.Details;
+            this.organisationListView.ItemActivate += new System.EventHandler(this.organisationListView_ItemActivate);
+            // 
+            // nameColumnHeader
+            // 
+            this.nameColumnHeader.Text = "Name";
+            this.nameColumnHeader.Width = 200;
+            // 
+            // typeColumnHeader
+            // 
+            this.typeColumnHeader.Text = "Type";
+            this.typeColumnHeader.Width = 105;
+            // 
+            // sizeColumnHeader
+            // 
+            this.sizeColumnHeader.Text = "Size";
+            this.sizeColumnHeader.Width = 80;
+            // 
             // newClubButton
             // 
             this.newClubButton.Location = new System.Drawing.Point(573, 659);
@@ -95,6 +144,7 @@
             this.newClubButton.TabIndex = 11;
             this.newClubButton.Text = "New Clu&b";
             this.newClubButton.UseVisualStyleBackColor = true;
+            this.newClubButton.Click += new System.EventHandler(this.newClubButton_Click);
             // 
             // newSchoolButton
             // 
@@ -104,6 +154,7 @@
             this.newSchoolButton.TabIndex = 10;
             this.newSchoolButton.Text = "New Sc&hool";
             this.newSchoolButton.UseVisualStyleBackColor = true;
+            this.newSchoolButton.Click += new System.EventHandler(this.newSchoolButton_Click);
             // 
             // organisationEventsGroupBox
             // 
@@ -126,21 +177,25 @@
             // 
             // organisationDeleteButton
             // 
+            this.organisationDeleteButton.Enabled = false;
             this.organisationDeleteButton.Location = new System.Drawing.Point(398, 659);
             this.organisationDeleteButton.Name = "organisationDeleteButton";
             this.organisationDeleteButton.Size = new System.Drawing.Size(158, 23);
             this.organisationDeleteButton.TabIndex = 9;
             this.organisationDeleteButton.Text = "&Delete Organisation";
             this.organisationDeleteButton.UseVisualStyleBackColor = true;
+            this.organisationDeleteButton.Click += new System.EventHandler(this.organisationDeleteButton_Click);
             // 
             // organisationSaveButton
             // 
+            this.organisationSaveButton.Enabled = false;
             this.organisationSaveButton.Location = new System.Drawing.Point(398, 633);
             this.organisationSaveButton.Name = "organisationSaveButton";
             this.organisationSaveButton.Size = new System.Drawing.Size(158, 23);
             this.organisationSaveButton.TabIndex = 8;
             this.organisationSaveButton.Text = "&Save Organisation";
             this.organisationSaveButton.UseVisualStyleBackColor = true;
+            this.organisationSaveButton.Click += new System.EventHandler(this.organisationSaveButton_Click);
             // 
             // organisationSizeTextBox
             // 
@@ -174,38 +229,6 @@
             this.organisationNameLabel.TabIndex = 1;
             this.organisationNameLabel.Text = "Organisation &Name";
             // 
-            // organisationListView
-            // 
-            this.organisationListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.nameColumnHeader,
-            this.typeColumnHeader,
-            this.sizeColumnHeader});
-            this.organisationListView.Dock = System.Windows.Forms.DockStyle.Left;
-            this.organisationListView.FullRowSelect = true;
-            this.organisationListView.Location = new System.Drawing.Point(3, 3);
-            this.organisationListView.MultiSelect = false;
-            this.organisationListView.Name = "organisationListView";
-            this.organisationListView.Size = new System.Drawing.Size(389, 679);
-            this.organisationListView.TabIndex = 12;
-            this.organisationListView.UseCompatibleStateImageBehavior = false;
-            this.organisationListView.View = System.Windows.Forms.View.Details;
-            this.organisationListView.ItemActivate += new System.EventHandler(this.organisationListView_ItemActivate);
-            // 
-            // nameColumnHeader
-            // 
-            this.nameColumnHeader.Text = "Name";
-            this.nameColumnHeader.Width = 200;
-            // 
-            // sizeColumnHeader
-            // 
-            this.sizeColumnHeader.Text = "Size";
-            this.sizeColumnHeader.Width = 80;
-            // 
-            // typeColumnHeader
-            // 
-            this.typeColumnHeader.Text = "Type";
-            this.typeColumnHeader.Width = 105;
-            // 
             // organisationContacts
             // 
             this.organisationContacts.Location = new System.Drawing.Point(398, 226);
@@ -219,23 +242,6 @@
             this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
             this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
             this.organisationAddressAddressControl.TabIndex = 5;
-            // 
-            // organisationTypeTextBox
-            // 
-            this.organisationTypeTextBox.Location = new System.Drawing.Point(498, 32);
-            this.organisationTypeTextBox.Name = "organisationTypeTextBox";
-            this.organisationTypeTextBox.ReadOnly = true;
-            this.organisationTypeTextBox.Size = new System.Drawing.Size(233, 20);
-            this.organisationTypeTextBox.TabIndex = 14;
-            // 
-            // organisationTypeLabel
-            // 
-            this.organisationTypeLabel.AutoSize = true;
-            this.organisationTypeLabel.Location = new System.Drawing.Point(395, 35);
-            this.organisationTypeLabel.Name = "organisationTypeLabel";
-            this.organisationTypeLabel.Size = new System.Drawing.Size(93, 13);
-            this.organisationTypeLabel.TabIndex = 13;
-            this.organisationTypeLabel.Text = "Organisation Type";
             // 
             // MainForm
             // 

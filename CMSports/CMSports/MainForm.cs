@@ -20,6 +20,7 @@ namespace CMSports
         }
 
         private List<Organisation> organisations = new List<Organisation>();
+        private Organisation activeOrganisation;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -36,11 +37,12 @@ namespace CMSports
             organisations.Add(org1);
             organisations.Add(org2);
 
-            populateOrganisationListView(organisations);
+            refreshOrganisationListView();
         }
 
-        private void populateOrganisationListView(List<Organisation> organisations)
+        private void refreshOrganisationListView()
         {
+            organisationListView.Items.Clear();
             foreach (Organisation organisation in organisations)
             {
                 ListViewItem listItem = new ListViewItem(organisation.Name);
@@ -54,7 +56,7 @@ namespace CMSports
         {
             int selectedIndex = organisationListView.SelectedIndices[0];
             Organisation organisation = organisations[selectedIndex];
-            clearOrganisationFields();
+            activeOrganisation = organisation;
             populateOrganisationFields(organisation);
         }
 
@@ -66,15 +68,61 @@ namespace CMSports
             organisationAddressAddressControl.Clear();
             organisationContacts.Clear();
             organisationEventsListView.Clear();
+            organisationSaveButton.Enabled = false;
+            organisationDeleteButton.Enabled = false;
         }
 
         private void populateOrganisationFields(Organisation organisation)
         {
+            clearOrganisationFields();
             organisationNameTextBox.Text = organisation.Name;
             organisationTypeTextBox.Text = organisation.Type;
             organisationSizeTextBox.Text = organisation.Size.ToString();
             organisationAddressAddressControl.Populate(organisation.Address);
             organisationContacts.Populate(organisation.Contacts);
+            organisationSaveButton.Enabled = true;
+            organisationDeleteButton.Enabled = true;
         }
+
+        private void organisationSaveButton_Click(object sender, EventArgs e)
+        {
+            saveOrganisation(activeOrganisation);
+            refreshOrganisationListView();
+            populateOrganisationFields(activeOrganisation);
+        }
+
+        private void saveOrganisation(Organisation organisation)
+        {
+            organisation.Name = organisationNameTextBox.Text;
+            organisation.Size = Convert.ToInt32(organisationSizeTextBox.Text);
+            organisation.Address = organisationAddressAddressControl.GetAddress();
+        }
+
+        private void organisationDeleteButton_Click(object sender, EventArgs e)
+        {
+            organisations.Remove(activeOrganisation);
+            activeOrganisation = null;
+            refreshOrganisationListView();
+            clearOrganisationFields();
+        }
+
+        private void newSchoolButton_Click(object sender, EventArgs e)
+        {
+            Organisation newSchool = new School("New School");
+            organisations.Add(newSchool);
+            activeOrganisation = newSchool;
+            refreshOrganisationListView();
+            populateOrganisationFields(newSchool);
+        }
+
+        private void newClubButton_Click(object sender, EventArgs e)
+        {
+            Organisation newClub = new Club("New Club");
+            organisations.Add(newClub);
+            activeOrganisation = newClub;
+            refreshOrganisationListView();
+            populateOrganisationFields(newClub);
+        }
+
     }
 }

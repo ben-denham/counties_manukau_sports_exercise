@@ -14,6 +14,14 @@ namespace CMSportsObjects
         private List<Contact> contacts;
         private List<Event> events;
 
+        public Organisation(string nameS)
+        {
+            Name = name;
+            contacts = new List<Contact>();
+            events = new List<Event>();
+            address = new Address();
+        }
+
         public Organisation(string name, int size, Address address)
         {
             Name = name;

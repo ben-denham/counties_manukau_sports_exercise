@@ -33,5 +33,15 @@ namespace CMSportsControls
             suburbTextBox.Text = address.Suburb;
             postcodeTextBox.Text = address.Postcode.ToString();
         }
+
+        public Address GetAddress()
+        {
+            Address address = new Address();
+            address.StreetNumber = streetNoTextBox.Text;
+            address.StreetName = streetNameTextBox.Text;
+            address.Suburb = suburbTextBox.Text;
+            address.Postcode = Convert.ToInt32(postcodeTextBox.Text);
+            return address;
+        }
     }
 }

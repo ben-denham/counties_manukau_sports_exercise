@@ -7,6 +7,11 @@ namespace CMSportsObjects
 {
     public class School : Organisation
     {
+        public School(string name) : base(name)
+        {
+
+        }
+
         public School(string name, int size, Address address)
             : base(name, size, address)
         {

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.contactsGroupBox = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.contactsListView = new System.Windows.Forms.ListView();
             this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,8 +43,8 @@
             // 
             // contactsGroupBox
             // 
-            this.contactsGroupBox.Controls.Add(this.button2);
-            this.contactsGroupBox.Controls.Add(this.button1);
+            this.contactsGroupBox.Controls.Add(this.removeButton);
+            this.contactsGroupBox.Controls.Add(this.editButton);
             this.contactsGroupBox.Controls.Add(this.addButton);
             this.contactsGroupBox.Controls.Add(this.contactsListView);
             this.contactsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -55,32 +55,37 @@
             this.contactsGroupBox.TabStop = false;
             this.contactsGroupBox.Text = "&Contacts";
             // 
-            // button2
+            // removeButton
             // 
-            this.button2.Location = new System.Drawing.Point(234, 205);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Remo&ve Contact";
-            this.button2.UseVisualStyleBackColor = true;
+            this.removeButton.Enabled = false;
+            this.removeButton.Location = new System.Drawing.Point(234, 205);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(95, 23);
+            this.removeButton.TabIndex = 3;
+            this.removeButton.Text = "Remo&ve Contact";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
-            // button1
+            // editButton
             // 
-            this.button1.Location = new System.Drawing.Point(120, 205);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Edit C&ontact";
-            this.button1.UseVisualStyleBackColor = true;
+            this.editButton.Enabled = false;
+            this.editButton.Location = new System.Drawing.Point(120, 205);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(95, 23);
+            this.editButton.TabIndex = 2;
+            this.editButton.Text = "Edit C&ontact";
+            this.editButton.UseVisualStyleBackColor = true;
             // 
             // addButton
             // 
+            this.addButton.Enabled = false;
             this.addButton.Location = new System.Drawing.Point(6, 205);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(95, 23);
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Ne&w Contact";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // contactsListView
             // 
@@ -99,6 +104,7 @@
             this.contactsListView.TabIndex = 0;
             this.contactsListView.UseCompatibleStateImageBehavior = false;
             this.contactsListView.View = System.Windows.Forms.View.Details;
+            this.contactsListView.SelectedIndexChanged += new System.EventHandler(this.contactsListView_SelectedIndexChanged);
             // 
             // nameColumnHeader
             // 
@@ -137,8 +143,8 @@
         private System.Windows.Forms.GroupBox contactsGroupBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.ListView contactsListView;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button removeButton;
+        private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.ColumnHeader nameColumnHeader;
         private System.Windows.Forms.ColumnHeader emailColumnHeader;
         private System.Windows.Forms.ColumnHeader addressColumnHeader;
