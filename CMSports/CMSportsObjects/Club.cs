@@ -7,7 +7,7 @@ namespace CMSportsObjects
 {
     public class Club : Organisation
     {
-        public Club(string name) : base(name)
+        public Club()
         {
 
         }

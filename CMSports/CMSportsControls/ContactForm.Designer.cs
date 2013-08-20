@@ -1,4 +1,4 @@
-﻿namespace CMSports
+﻿namespace CMSportsControls
 {
     partial class ContactForm
     {
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addressControl1 = new CMSportsControls.AddressControl();
+            this.contactAddressControl = new CMSportsControls.AddressControl();
             this.cancelButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.emailLabel = new System.Windows.Forms.Label();
             this.homePhoneTextBox = new System.Windows.Forms.TextBox();
             this.homePhoneLabel = new System.Windows.Forms.Label();
             this.workPhoneTextBox = new System.Windows.Forms.TextBox();
             this.workPhoneLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // addressControl1
+            // contactAddressControl
             // 
-            this.addressControl1.Location = new System.Drawing.Point(12, 117);
-            this.addressControl1.Name = "addressControl1";
-            this.addressControl1.Size = new System.Drawing.Size(333, 136);
-            this.addressControl1.TabIndex = 8;
+            this.contactAddressControl.Location = new System.Drawing.Point(12, 117);
+            this.contactAddressControl.Name = "contactAddressControl";
+            this.contactAddressControl.Size = new System.Drawing.Size(333, 136);
+            this.contactAddressControl.TabIndex = 8;
             // 
             // cancelButton
             // 
@@ -57,6 +57,7 @@
             this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "&Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // saveButton
             // 
@@ -66,6 +67,7 @@
             this.saveButton.TabIndex = 9;
             this.saveButton.Text = "&Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // nameTextBox
             // 
@@ -82,22 +84,6 @@
             this.nameLabel.Size = new System.Drawing.Size(75, 13);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Contact &Name";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.Location = new System.Drawing.Point(112, 38);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(233, 20);
-            this.emailTextBox.TabIndex = 3;
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(9, 41);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(85, 13);
-            this.emailLabel.TabIndex = 2;
-            this.emailLabel.Text = "Contact &Address";
             // 
             // homePhoneTextBox
             // 
@@ -131,6 +117,22 @@
             this.workPhoneLabel.TabIndex = 6;
             this.workPhoneLabel.Text = "&Work Phone";
             // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(9, 41);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(73, 13);
+            this.emailLabel.TabIndex = 2;
+            this.emailLabel.Text = "&Email Address";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(112, 38);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(233, 20);
+            this.emailTextBox.TabIndex = 3;
+            // 
             // ContactForm
             // 
             this.AcceptButton = this.saveButton;
@@ -148,7 +150,7 @@
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.addressControl1);
+            this.Controls.Add(this.contactAddressControl);
             this.Name = "ContactForm";
             this.Text = "Contact Form";
             this.ResumeLayout(false);
@@ -158,16 +160,16 @@
 
         #endregion
 
-        private CMSportsControls.AddressControl addressControl1;
+        private CMSportsControls.AddressControl contactAddressControl;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox homePhoneTextBox;
         private System.Windows.Forms.Label homePhoneLabel;
         private System.Windows.Forms.TextBox workPhoneTextBox;
         private System.Windows.Forms.Label workPhoneLabel;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.TextBox emailTextBox;
     }
 }

@@ -14,9 +14,8 @@ namespace CMSportsObjects
         private string homePhone;
         private string workPhone;
 
-        public Contact(string name)
+        public Contact()
         {
-            Name = name;
             address = new Address();
         }
 

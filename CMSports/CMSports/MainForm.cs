@@ -113,7 +113,7 @@ namespace CMSports
 
         private void newSchoolButton_Click(object sender, EventArgs e)
         {
-            Organisation newSchool = new School("New School");
+            Organisation newSchool = new School();
             organisations.Add(newSchool);
             activeOrganisation = newSchool;
             populateOrganisationFields(newSchool);
@@ -121,7 +121,7 @@ namespace CMSports
 
         private void newClubButton_Click(object sender, EventArgs e)
         {
-            Organisation newClub = new Club("New Club");
+            Organisation newClub = new Club();
             organisations.Add(newClub);
             activeOrganisation = newClub;
             populateOrganisationFields(newClub);
