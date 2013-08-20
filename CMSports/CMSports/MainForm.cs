@@ -96,6 +96,11 @@ namespace CMSports
             organisation.Name = organisationNameTextBox.Text;
             organisation.Size = Convert.ToInt32(organisationSizeTextBox.Text);
             organisation.Address = organisationAddressAddressControl.GetAddress();
+            int index = organisations.IndexOf(organisation);
+            if (index == -1)
+            {
+                organisations.Add(organisation);
+            }
         }
 
         private void organisationDeleteButton_Click(object sender, EventArgs e)
@@ -111,7 +116,6 @@ namespace CMSports
             Organisation newSchool = new School("New School");
             organisations.Add(newSchool);
             activeOrganisation = newSchool;
-            refreshOrganisationListView();
             populateOrganisationFields(newSchool);
         }
 
@@ -120,7 +124,6 @@ namespace CMSports
             Organisation newClub = new Club("New Club");
             organisations.Add(newClub);
             activeOrganisation = newClub;
-            refreshOrganisationListView();
             populateOrganisationFields(newClub);
         }
 
