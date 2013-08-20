@@ -52,14 +52,6 @@ namespace CMSports
             }
         }
 
-        private void organisationListView_ItemActivate(object sender, EventArgs e)
-        {
-            int selectedIndex = organisationListView.SelectedIndices[0];
-            Organisation organisation = organisations[selectedIndex];
-            activeOrganisation = organisation;
-            populateOrganisationFields(organisation);
-        }
-
         private void clearOrganisationFields()
         {
             organisationNameTextBox.Clear();
@@ -125,6 +117,22 @@ namespace CMSports
             organisations.Add(newClub);
             activeOrganisation = newClub;
             populateOrganisationFields(newClub);
+        }
+
+        private void organisationListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (organisationListView.SelectedIndices.Count > 0)
+            {
+                int selectedIndex = organisationListView.SelectedIndices[0];
+                Organisation organisation = organisations[selectedIndex];
+                activeOrganisation = organisation;
+                populateOrganisationFields(organisation);
+            }
+            else
+            {
+                activeOrganisation = null;
+                clearOrganisationFields();
+            }
         }
 
     }
