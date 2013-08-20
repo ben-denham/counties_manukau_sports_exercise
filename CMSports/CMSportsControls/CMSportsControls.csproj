@@ -47,6 +47,12 @@
     <Compile Include="AddressControl.Designer.cs">
       <DependentUpon>AddressControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactForm.Designer.cs">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContactsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -59,6 +65,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AddressControl.resx">
       <DependentUpon>AddressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactForm.resx">
+      <DependentUpon>ContactForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContactsControl.resx">
       <DependentUpon>ContactsControl.cs</DependentUpon>

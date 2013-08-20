@@ -38,16 +38,16 @@
             this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.newClubButton = new System.Windows.Forms.Button();
             this.newSchoolButton = new System.Windows.Forms.Button();
+            this.organisationContacts = new CMSportsControls.ContactsControl();
             this.organisationEventsGroupBox = new System.Windows.Forms.GroupBox();
             this.organisationEventsListView = new System.Windows.Forms.ListView();
             this.organisationDeleteButton = new System.Windows.Forms.Button();
             this.organisationSaveButton = new System.Windows.Forms.Button();
             this.organisationSizeTextBox = new System.Windows.Forms.TextBox();
             this.organisationSizeLabel = new System.Windows.Forms.Label();
+            this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
             this.organisationNameTextBox = new System.Windows.Forms.TextBox();
             this.organisationNameLabel = new System.Windows.Forms.Label();
-            this.organisationContacts = new CMSportsControls.ContactsControl();
-            this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
             this.organisationEventsGroupBox.SuspendLayout();
@@ -119,7 +119,7 @@
             this.organisationListView.TabIndex = 12;
             this.organisationListView.UseCompatibleStateImageBehavior = false;
             this.organisationListView.View = System.Windows.Forms.View.Details;
-            this.organisationListView.ItemActivate += new System.EventHandler(this.organisationListView_ItemActivate);
+            this.organisationListView.SelectedIndexChanged += new System.EventHandler(this.organisationListView_SelectedIndexChanged);
             // 
             // nameColumnHeader
             // 
@@ -155,6 +155,13 @@
             this.newSchoolButton.Text = "New Sc&hool";
             this.newSchoolButton.UseVisualStyleBackColor = true;
             this.newSchoolButton.Click += new System.EventHandler(this.newSchoolButton_Click);
+            // 
+            // organisationContacts
+            // 
+            this.organisationContacts.Location = new System.Drawing.Point(398, 226);
+            this.organisationContacts.Name = "organisationContacts";
+            this.organisationContacts.Size = new System.Drawing.Size(333, 234);
+            this.organisationContacts.TabIndex = 6;
             // 
             // organisationEventsGroupBox
             // 
@@ -213,6 +220,13 @@
             this.organisationSizeLabel.TabIndex = 3;
             this.organisationSizeLabel.Text = "Organisation S&ize";
             // 
+            // organisationAddressAddressControl
+            // 
+            this.organisationAddressAddressControl.Location = new System.Drawing.Point(398, 84);
+            this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
+            this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
+            this.organisationAddressAddressControl.TabIndex = 5;
+            // 
             // organisationNameTextBox
             // 
             this.organisationNameTextBox.Location = new System.Drawing.Point(498, 6);
@@ -228,20 +242,6 @@
             this.organisationNameLabel.Size = new System.Drawing.Size(97, 13);
             this.organisationNameLabel.TabIndex = 1;
             this.organisationNameLabel.Text = "Organisation &Name";
-            // 
-            // organisationContacts
-            // 
-            this.organisationContacts.Location = new System.Drawing.Point(398, 226);
-            this.organisationContacts.Name = "organisationContacts";
-            this.organisationContacts.Size = new System.Drawing.Size(333, 234);
-            this.organisationContacts.TabIndex = 6;
-            // 
-            // organisationAddressAddressControl
-            // 
-            this.organisationAddressAddressControl.Location = new System.Drawing.Point(398, 84);
-            this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
-            this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
-            this.organisationAddressAddressControl.TabIndex = 5;
             // 
             // MainForm
             // 

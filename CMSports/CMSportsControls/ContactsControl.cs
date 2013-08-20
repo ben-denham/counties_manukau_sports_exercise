@@ -65,14 +65,30 @@ namespace CMSportsControls
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            contacts.Add(new Contact("New Contact"));
-            Populate(contacts);
+            Contact newContact = new Contact();
+            ContactForm contactForm = new ContactForm(newContact);
+            DialogResult result = contactForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                contacts.Add(newContact);
+                Populate(contacts);
+            }
         }
 
         private void removeButton_Click(object sender, EventArgs e)
         {
             contacts.Remove(selectedContact);
             Populate(contacts);
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            ContactForm contactForm = new ContactForm(selectedContact);
+            DialogResult result = contactForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Populate(contacts);
+            }
         }
     }
 }
