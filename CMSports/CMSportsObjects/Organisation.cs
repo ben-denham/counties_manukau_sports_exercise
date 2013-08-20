@@ -39,7 +39,10 @@ namespace CMSportsObjects
             }
             set
             {
-                name = value;
+                if (ValidName(value))
+                {
+                    name = value;
+                }
             }
         }
 
@@ -73,10 +76,6 @@ namespace CMSportsObjects
             {
                 return contacts;
             }
-            set
-            {
-                contacts = value;
-            }
         }
 
         public List<Event> Events
@@ -84,10 +83,6 @@ namespace CMSportsObjects
             get
             {
                 return events;
-            }
-            set
-            {
-                events = value;
             }
         }
 
@@ -97,6 +92,12 @@ namespace CMSportsObjects
             {
                 return this.GetType().Name.ToString();
             }
+        }
+
+        private bool ValidName(string value)
+        {
+            //throw new System.NotImplementedException();
+            return true;
         }
     }
 }
