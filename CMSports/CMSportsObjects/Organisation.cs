@@ -38,7 +38,8 @@ namespace CMSportsObjects
             }
             set
             {
-                if (ValidName(value))
+                
+                if (Validation.ValidName(value))
                 {
                     name = value;
                 }
@@ -93,10 +94,5 @@ namespace CMSportsObjects
             }
         }
 
-        private bool ValidName(string value)
-        {
-            //throw new System.NotImplementedException();
-            return true;
-        }
     }
 }
