@@ -38,10 +38,14 @@ namespace CMSportsObjects
             }
             set
             {
-                
+
                 if (Validation.ValidName(value))
                 {
                     name = value;
+                }
+                else
+                {
+                    throw new System.ArgumentException();
                 }
             }
         }
