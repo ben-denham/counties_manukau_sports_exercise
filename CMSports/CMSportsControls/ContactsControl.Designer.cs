@@ -50,7 +50,7 @@
             this.contactsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contactsGroupBox.Location = new System.Drawing.Point(0, 0);
             this.contactsGroupBox.Name = "contactsGroupBox";
-            this.contactsGroupBox.Size = new System.Drawing.Size(333, 234);
+            this.contactsGroupBox.Size = new System.Drawing.Size(672, 234);
             this.contactsGroupBox.TabIndex = 0;
             this.contactsGroupBox.TabStop = false;
             this.contactsGroupBox.Text = "&Contacts";
@@ -58,7 +58,7 @@
             // removeButton
             // 
             this.removeButton.Enabled = false;
-            this.removeButton.Location = new System.Drawing.Point(234, 205);
+            this.removeButton.Location = new System.Drawing.Point(571, 205);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(95, 23);
             this.removeButton.TabIndex = 3;
@@ -69,7 +69,7 @@
             // editButton
             // 
             this.editButton.Enabled = false;
-            this.editButton.Location = new System.Drawing.Point(120, 205);
+            this.editButton.Location = new System.Drawing.Point(470, 205);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(95, 23);
             this.editButton.TabIndex = 2;
@@ -80,7 +80,7 @@
             // addButton
             // 
             this.addButton.Enabled = false;
-            this.addButton.Location = new System.Drawing.Point(6, 205);
+            this.addButton.Location = new System.Drawing.Point(369, 205);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(95, 23);
             this.addButton.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.contactsListView.Location = new System.Drawing.Point(3, 16);
             this.contactsListView.MultiSelect = false;
             this.contactsListView.Name = "contactsListView";
-            this.contactsListView.Size = new System.Drawing.Size(327, 183);
+            this.contactsListView.Size = new System.Drawing.Size(666, 183);
             this.contactsListView.TabIndex = 0;
             this.contactsListView.UseCompatibleStateImageBehavior = false;
             this.contactsListView.View = System.Windows.Forms.View.Details;
@@ -110,22 +110,27 @@
             // nameColumnHeader
             // 
             this.nameColumnHeader.Text = "Name";
+            this.nameColumnHeader.Width = 120;
             // 
             // emailColumnHeader
             // 
             this.emailColumnHeader.Text = "Email";
+            this.emailColumnHeader.Width = 120;
             // 
             // addressColumnHeader
             // 
             this.addressColumnHeader.Text = "Address";
+            this.addressColumnHeader.Width = 210;
             // 
             // homePhoneColumnHeader
             // 
             this.homePhoneColumnHeader.Text = "Home Phone";
+            this.homePhoneColumnHeader.Width = 106;
             // 
             // workPhoneColumnHeader
             // 
             this.workPhoneColumnHeader.Text = "Work Phone";
+            this.workPhoneColumnHeader.Width = 106;
             // 
             // ContactsControl
             // 
@@ -133,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.contactsGroupBox);
             this.Name = "ContactsControl";
-            this.Size = new System.Drawing.Size(333, 234);
+            this.Size = new System.Drawing.Size(672, 234);
             this.contactsGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 

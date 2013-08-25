@@ -134,6 +134,5 @@ namespace CMSports
                 clearOrganisationFields();
             }
         }
-
     }
 }

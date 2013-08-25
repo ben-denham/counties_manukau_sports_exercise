@@ -38,16 +38,16 @@
             this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.newClubButton = new System.Windows.Forms.Button();
             this.newSchoolButton = new System.Windows.Forms.Button();
-            this.organisationContacts = new CMSportsControls.ContactsControl();
             this.organisationEventsGroupBox = new System.Windows.Forms.GroupBox();
             this.organisationEventsListView = new System.Windows.Forms.ListView();
             this.organisationDeleteButton = new System.Windows.Forms.Button();
             this.organisationSaveButton = new System.Windows.Forms.Button();
             this.organisationSizeTextBox = new System.Windows.Forms.TextBox();
             this.organisationSizeLabel = new System.Windows.Forms.Label();
-            this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
             this.organisationNameTextBox = new System.Windows.Forms.TextBox();
             this.organisationNameLabel = new System.Windows.Forms.Label();
+            this.organisationContacts = new CMSportsControls.ContactsControl();
+            this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
             this.organisationEventsGroupBox.SuspendLayout();
@@ -60,7 +60,7 @@
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(747, 711);
+            this.mainTabControl.Size = new System.Drawing.Size(1084, 582);
             this.mainTabControl.TabIndex = 0;
             // 
             // organisationsTabPage
@@ -82,7 +82,7 @@
             this.organisationsTabPage.Location = new System.Drawing.Point(4, 22);
             this.organisationsTabPage.Name = "organisationsTabPage";
             this.organisationsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.organisationsTabPage.Size = new System.Drawing.Size(739, 685);
+            this.organisationsTabPage.Size = new System.Drawing.Size(1076, 556);
             this.organisationsTabPage.TabIndex = 0;
             this.organisationsTabPage.Text = "Organisations";
             this.organisationsTabPage.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.organisationListView.Location = new System.Drawing.Point(3, 3);
             this.organisationListView.MultiSelect = false;
             this.organisationListView.Name = "organisationListView";
-            this.organisationListView.Size = new System.Drawing.Size(389, 679);
+            this.organisationListView.Size = new System.Drawing.Size(389, 550);
             this.organisationListView.TabIndex = 12;
             this.organisationListView.UseCompatibleStateImageBehavior = false;
             this.organisationListView.View = System.Windows.Forms.View.Details;
@@ -138,7 +138,7 @@
             // 
             // newClubButton
             // 
-            this.newClubButton.Location = new System.Drawing.Point(573, 659);
+            this.newClubButton.Location = new System.Drawing.Point(573, 119);
             this.newClubButton.Name = "newClubButton";
             this.newClubButton.Size = new System.Drawing.Size(158, 23);
             this.newClubButton.TabIndex = 11;
@@ -148,7 +148,7 @@
             // 
             // newSchoolButton
             // 
-            this.newSchoolButton.Location = new System.Drawing.Point(573, 633);
+            this.newSchoolButton.Location = new System.Drawing.Point(573, 90);
             this.newSchoolButton.Name = "newSchoolButton";
             this.newSchoolButton.Size = new System.Drawing.Size(158, 23);
             this.newSchoolButton.TabIndex = 10;
@@ -156,19 +156,12 @@
             this.newSchoolButton.UseVisualStyleBackColor = true;
             this.newSchoolButton.Click += new System.EventHandler(this.newSchoolButton_Click);
             // 
-            // organisationContacts
-            // 
-            this.organisationContacts.Location = new System.Drawing.Point(398, 226);
-            this.organisationContacts.Name = "organisationContacts";
-            this.organisationContacts.Size = new System.Drawing.Size(333, 234);
-            this.organisationContacts.TabIndex = 6;
-            // 
             // organisationEventsGroupBox
             // 
             this.organisationEventsGroupBox.Controls.Add(this.organisationEventsListView);
-            this.organisationEventsGroupBox.Location = new System.Drawing.Point(398, 466);
+            this.organisationEventsGroupBox.Location = new System.Drawing.Point(398, 388);
             this.organisationEventsGroupBox.Name = "organisationEventsGroupBox";
-            this.organisationEventsGroupBox.Size = new System.Drawing.Size(333, 161);
+            this.organisationEventsGroupBox.Size = new System.Drawing.Size(672, 162);
             this.organisationEventsGroupBox.TabIndex = 7;
             this.organisationEventsGroupBox.TabStop = false;
             this.organisationEventsGroupBox.Text = "&Events";
@@ -178,14 +171,14 @@
             this.organisationEventsListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.organisationEventsListView.Location = new System.Drawing.Point(3, 16);
             this.organisationEventsListView.Name = "organisationEventsListView";
-            this.organisationEventsListView.Size = new System.Drawing.Size(327, 142);
+            this.organisationEventsListView.Size = new System.Drawing.Size(666, 143);
             this.organisationEventsListView.TabIndex = 0;
             this.organisationEventsListView.UseCompatibleStateImageBehavior = false;
             // 
             // organisationDeleteButton
             // 
             this.organisationDeleteButton.Enabled = false;
-            this.organisationDeleteButton.Location = new System.Drawing.Point(398, 659);
+            this.organisationDeleteButton.Location = new System.Drawing.Point(398, 119);
             this.organisationDeleteButton.Name = "organisationDeleteButton";
             this.organisationDeleteButton.Size = new System.Drawing.Size(158, 23);
             this.organisationDeleteButton.TabIndex = 9;
@@ -196,7 +189,7 @@
             // organisationSaveButton
             // 
             this.organisationSaveButton.Enabled = false;
-            this.organisationSaveButton.Location = new System.Drawing.Point(398, 633);
+            this.organisationSaveButton.Location = new System.Drawing.Point(398, 90);
             this.organisationSaveButton.Name = "organisationSaveButton";
             this.organisationSaveButton.Size = new System.Drawing.Size(158, 23);
             this.organisationSaveButton.TabIndex = 8;
@@ -220,13 +213,6 @@
             this.organisationSizeLabel.TabIndex = 3;
             this.organisationSizeLabel.Text = "Organisation S&ize";
             // 
-            // organisationAddressAddressControl
-            // 
-            this.organisationAddressAddressControl.Location = new System.Drawing.Point(398, 84);
-            this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
-            this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
-            this.organisationAddressAddressControl.TabIndex = 5;
-            // 
             // organisationNameTextBox
             // 
             this.organisationNameTextBox.Location = new System.Drawing.Point(498, 6);
@@ -243,12 +229,26 @@
             this.organisationNameLabel.TabIndex = 1;
             this.organisationNameLabel.Text = "Organisation &Name";
             // 
+            // organisationContacts
+            // 
+            this.organisationContacts.Location = new System.Drawing.Point(398, 148);
+            this.organisationContacts.Name = "organisationContacts";
+            this.organisationContacts.Size = new System.Drawing.Size(672, 234);
+            this.organisationContacts.TabIndex = 6;
+            // 
+            // organisationAddressAddressControl
+            // 
+            this.organisationAddressAddressControl.Location = new System.Drawing.Point(737, 6);
+            this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
+            this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
+            this.organisationAddressAddressControl.TabIndex = 5;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.organisationSaveButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 711);
+            this.ClientSize = new System.Drawing.Size(1084, 582);
             this.Controls.Add(this.mainTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
