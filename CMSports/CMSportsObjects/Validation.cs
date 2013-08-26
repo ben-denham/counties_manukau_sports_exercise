@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.RegularExpressions
+using System.Text.RegularExpressions;
 
 namespace CMSportsObjects
 {
@@ -24,7 +24,12 @@ namespace CMSportsObjects
 
         public static bool ValidEmail(string email)
         {
-            return true;
+            string regex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$";
+            if (Regex.IsMatch(email, @regex, RegexOptions.IgnoreCase))
+            {
+                return true;
+            }
+            return false;
         }
 
         public static bool ValidSize(int size)
