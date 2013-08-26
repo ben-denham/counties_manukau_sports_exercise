@@ -38,7 +38,6 @@ namespace CMSportsObjects
             }
             set
             {
-
                 if (Validation.ValidName(value))
                 {
                     name = value;
@@ -70,7 +69,14 @@ namespace CMSportsObjects
             }
             set
             {
-                size = value;
+                if (Validation.ValidSize(value))
+                {
+                    size = value;
+                }
+                else
+                {
+                    throw new System.ArgumentException();
+                }
             }
         }
 
