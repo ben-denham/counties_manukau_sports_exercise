@@ -14,7 +14,7 @@ namespace CMSportsObjects
             // More than 1 character
             // Not more than 130 char
             // No numbers or symbols other than dash, apostrophe or space
-            Regex r = new Regex("^[a-zA-Z][a-zA-Z'- ]*[a-zA-Z]?$");
+            Regex r = new Regex("^([a-zA-Z][a-zA-Z'- ]*[a-zA-Z]|[a-zA-Z])$");
             if (r.IsMatch(name) && name.Length > 1 && name.Length < 130)
             {
                 return true;
@@ -24,8 +24,8 @@ namespace CMSportsObjects
 
         public static bool ValidEmail(string email)
         {
-            string regex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$";
-            if (Regex.IsMatch(email, @regex, RegexOptions.IgnoreCase))
+            Regex r = new Regex("^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$", RegexOptions.IgnoreCase);
+            if (r.IsMatch(email))
             {
                 return true;
             }

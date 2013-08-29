@@ -9,18 +9,37 @@ namespace CMSportsObjects
     {
         private string name;
         private Address address;
-        private Contact coordinator;
         private int capacity;
         private DateTime date;
+        private List<Contact> contacts;
+        private Organisation organisation;
+        private Programme program;
+
+        public Event()
+        {
+            contacts = new List<Contact>();
+        }
+
+        public Event(string name, Address address, int capacity, DateTime date, Organisation organisation, Programme program)
+        {
+            contacts = new List<Contact>();
+            Name = name;
+            Address = address;
+            Capacity = capacity;
+            Date = date;
+            Organisation = organisation;
+            Program = program;
+        }
 
         public string Name
         {
             get
             {
-                throw new System.NotImplementedException();
+                return name;
             }
             set
             {
+                name = value;
             }
         }
 
@@ -28,21 +47,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return address;
             }
             set
             {
-            }
-        }
-
-        public Contact Coordinator
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                address = value;
             }
         }
 
@@ -50,10 +59,11 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return capacity;
             }
             set
             {
+                capacity = value;
             }
         }
 
@@ -61,10 +71,43 @@ namespace CMSportsObjects
         {
             get
             {
-                throw new System.NotImplementedException();
+                return date;
             }
             set
             {
+                date = value;
+            }
+        }
+
+        public List<Contact> Contacts
+        {
+            get
+            {
+                return contacts;
+            }
+        }
+
+        public Organisation Organisation
+        {
+            get
+            {
+                return organisation;
+            }
+            set
+            {
+                organisation = value;
+            }
+        }
+
+        public Programme Program
+        {
+            get
+            {
+                return program;
+            }
+            set
+            {
+                program = value;
             }
         }
     }

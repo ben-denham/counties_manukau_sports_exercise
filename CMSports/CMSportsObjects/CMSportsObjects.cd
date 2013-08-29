@@ -28,11 +28,11 @@
       <FileName>Event.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CMSportsObjects.Program">
+  <Class Name="CMSportsObjects.Programme">
     <Position X="6.25" Y="4.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAIAAAAAQAAgAEAAIAAAAIAAAACAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <HashCode>BAAAAAQAAAAgAAAAIAAAAAQAAgAEAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Programme.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CMSportsObjects.Contact">
@@ -45,7 +45,7 @@
   <Class Name="CMSportsObjects.Validation">
     <Position X="10" Y="4.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAABAAAEAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Validation.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -2,30 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CMSportsObjects
 {
-    public abstract class Organisation
+    public class Programme
     {
         private string name;
-        private Address address;
-        private int size;
+        private string description;
         private List<Contact> contacts;
         private List<Event> events;
 
-        public Organisation()
+        public Programme()
         {
             contacts = new List<Contact>();
             events = new List<Event>();
-            address = new Address();
         }
 
-        public Organisation(string name, int size, Address address)
+        public Programme(string name, string description)
         {
             Name = name;
-            Size = size;
-            Address = address;
+            Description = description;
             contacts = new List<Contact>();
             events = new List<Event>();
         }
@@ -42,27 +38,15 @@ namespace CMSportsObjects
             }
         }
 
-        public Address Address
+        public string Description
         {
             get
             {
-                return address;
+                return description;
             }
             set
             {
-                address = value;
-            }
-        }
-
-        public int Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
+                description = value;
             }
         }
 
@@ -79,14 +63,6 @@ namespace CMSportsObjects
             get
             {
                 return events;
-            }
-        }
-
-        public string Type
-        {
-            get
-            {
-                return this.GetType().Name.ToString();
             }
         }
 

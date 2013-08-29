@@ -20,13 +20,15 @@ namespace CMSports
         }
 
         private List<Organisation> organisations = new List<Organisation>();
+        private List<Programme> programs = new List<Programme>();
         private Organisation activeOrganisation;
+        private Programme activeProgram;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             Organisation org1 = new School("Tyndale", 140, new Address("Murphy's Road", "123a", "Flat Bush", 2012));
             var address1 = new Address("Contact's Road", "321", "Farm Cove", 2015);
-            var contact1 = new Contact("Ben Denham", "contact@gmail.com", address1, "(09) 123 1234", "027456124");
+            var contact1 = new Contact("Ben Denham", "contact@gmail.com", address1, "(09) 123 1234", "02745624");
             org1.Contacts.Add(contact1);
 
             Organisation org2 = new Club("Macleans", 1000, new Address("Beach Road", "567", "Bucklands Beach", 2017));
@@ -37,8 +39,23 @@ namespace CMSports
             organisations.Add(org1);
             organisations.Add(org2);
 
+            Programme prog1 = new Programme("Coaching", "Our Awesome coaching program.");
+            var address3 = new Address("Contact's Road", "456", "Flat Bush", 2014);
+            var contact3 = new Contact("Joe Bloggs", "joe@gmail.com", address3, "(09) 683 1254", "027451544");
+            prog1.Contacts.Add(contact3);
+            Programme prog2 = new Programme("Fitness", "Our cool fitness program.");
+            var address4 = new Address("Contact's Road", "654", "Botany", 2018);
+            var contact4 = new Contact("Borris Jones", "borris@gmail.com", address4, "(09) 565 2356", "027496334");
+            prog2.Contacts.Add(contact4);
+
+            programs.Add(prog1);
+            programs.Add(prog2);
+
             refreshOrganisationListView();
+            refreshProgramListView();
         }
+
+        /* Organisations Tab */
 
         private void refreshOrganisationListView()
         {
@@ -124,14 +141,95 @@ namespace CMSports
             if (organisationListView.SelectedIndices.Count > 0)
             {
                 int selectedIndex = organisationListView.SelectedIndices[0];
-                Organisation organisation = organisations[selectedIndex];
-                activeOrganisation = organisation;
-                populateOrganisationFields(organisation);
+                activeOrganisation = organisations[selectedIndex];
+                populateOrganisationFields(activeOrganisation);
             }
             else
             {
                 activeOrganisation = null;
                 clearOrganisationFields();
+            }
+        }
+
+        /* Programs Tab */
+
+        private void refreshProgramListView()
+        {
+            programListView.Items.Clear();
+            foreach (Programme program in programs)
+            {
+                ListViewItem listItem = new ListViewItem(program.Name);
+                listItem.SubItems.Add(program.Description);
+                programListView.Items.Add(listItem);
+            }
+        }
+
+        private void clearProgramFields()
+        {
+            programNameTextBox.Clear();
+            programDescriptionTextBox.Clear();
+            programContacts.Clear();
+            programEventsListView.Clear();
+            programSaveButton.Enabled = false;
+            programDeleteButton.Enabled = false;
+        }
+
+        private void populateProgramFields(Programme program)
+        {
+            clearProgramFields();
+            programNameTextBox.Text = program.Name;
+            programDescriptionTextBox.Text = program.Description;
+            programContacts.Populate(program.Contacts);
+            programSaveButton.Enabled = true;
+            programDeleteButton.Enabled = true;
+        }
+
+        private void programSaveButton_Click(object sender, EventArgs e)
+        {
+            saveProgram(activeProgram);
+            refreshProgramListView();
+            populateProgramFields(activeProgram);
+        }
+
+        private void saveProgram(Programme program)
+        {
+            program.Name = programNameTextBox.Text;
+            program.Description = programDescriptionTextBox.Text;
+            int index = programs.IndexOf(program);
+            if (index == -1)
+            {
+                programs.Add(program);
+            }
+        }
+
+        private void programDeleteButton_Click(object sender, EventArgs e)
+        {
+            programs.Remove(activeProgram);
+            activeProgram = null;
+            refreshProgramListView();
+            clearProgramFields();
+        }
+
+        private void programNewButton_Click(object sender, EventArgs e)
+        {
+            Programme newProgram = new Programme();
+            programs.Add(newProgram);
+            activeProgram = newProgram;
+            populateProgramFields(newProgram);
+        }
+
+        private void programListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (programListView.SelectedIndices.Count > 0)
+            {
+                int selectedIndex = programListView.SelectedIndices[0];
+                activeProgram = programs[selectedIndex];
+                populateProgramFields(activeProgram);
+            }
+            else
+            {
+                activeProgram = null;
+                clearProgramFields();
             }
         }
     }

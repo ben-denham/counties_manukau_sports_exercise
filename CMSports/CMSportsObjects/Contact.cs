@@ -36,14 +36,7 @@ namespace CMSportsObjects
             }
             set
             {
-                if (Validation.ValidName(value))
-                {
-                    name = value;
-                }
-                else
-                {
-                    throw new System.ArgumentException();
-                }
+                name = value;
             }
         }
 
@@ -67,14 +60,7 @@ namespace CMSportsObjects
             }
             set
             {
-                if (Validation.ValidEmail(value))
-                {
-                    email = value;
-                }
-                else
-                {
-                    throw new System.ArgumentException();
-                }
+                email = value;
             }
         }
 
