@@ -29,6 +29,8 @@ namespace CMSports
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            eventEndDateTimePicker.Value = DateTime.Now.AddHours(1);
+
             Organisation org1 = new School("Tyndale", 140, new Address("Murphy's Road", "123a", "Flat Bush", 2012));
             var address1 = new Address("Contact's Road", "321", "Farm Cove", 2015);
             var contact1 = new Contact("Ben Denham", "contact@gmail.com", address1, "(09) 123 1234", "02745624");
@@ -56,6 +58,26 @@ namespace CMSports
 
             refreshOrganisationListView();
             refreshProgramListView();
+            refreshEventListView();
+            populateEventOrganisationComboBox();
+            populateEventProgramComboBox();
+        }
+
+        private void mainTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (mainTabControl.SelectedIndex)
+            {
+                case 0:
+                    refreshOrganisationEventsListView();
+                    break;
+                case 1:
+                    refreshProgramEventsListView();
+                    break;
+                case 2:
+                    populateEventOrganisationComboBox();
+                    populateEventProgramComboBox();
+                    break;
+            }
         }
 
         /* Organisations Tab */
@@ -70,6 +92,11 @@ namespace CMSports
                 listItem.SubItems.Add(organisation.Size.ToString());
                 organisationListView.Items.Add(listItem);
             }
+        }
+
+        private void refreshOrganisationEventsListView()
+        {
+
         }
 
         private void clearOrganisationFields()
@@ -167,6 +194,11 @@ namespace CMSports
             }
         }
 
+        private void refreshProgramEventsListView()
+        {
+
+        }
+
         private void clearProgramFields()
         {
             programNameTextBox.Clear();
@@ -233,6 +265,76 @@ namespace CMSports
             {
                 activeProgram = null;
                 clearProgramFields();
+            }
+        }
+
+        /* Events Tab */
+
+        private void refreshEventListView()
+        {
+            eventListView.Items.Clear();
+            foreach (Event cmsEvent in events)
+            {
+                ListViewItem listItem = new ListViewItem(cmsEvent.Name);
+                listItem.SubItems.Add(cmsEvent.Organisation.ToString());
+                listItem.SubItems.Add(cmsEvent.Program.ToString());
+                eventListView.Items.Add(listItem);
+            }
+        }
+
+        private void populateEventOrganisationComboBox()
+        {
+            eventOrganisationComboBox.DataSource = organisations;
+        }
+
+        private void populateEventProgramComboBox()
+        {
+            eventProgramComboBox.DataSource = programs;
+        }
+
+        private void clearEventFields()
+        {
+            eventNameTextBox.Clear();
+            eventCapacityTextBox.Clear();
+            eventAddressControl.Clear();
+            eventStartDateTimePicker.Value = DateTime.Now;
+            eventEndDateTimePicker.Value = DateTime.Now.AddHours(1);
+            eventOrganisationComboBox.SelectedIndex = -1;
+            eventProgramComboBox.SelectedIndex = -1;
+            eventDescriptionTextBox.Clear();
+            eventContacts.Clear();
+            eventSaveButton.Enabled = false;
+            eventDeleteButton.Enabled = false;
+        }
+
+        private void populateEventFields(Event cmsEvent)
+        {
+            clearEventFields();
+            eventNameTextBox.Text = cmsEvent.Name;
+            eventCapacityTextBox.Text = cmsEvent.Capacity.ToString();
+            eventAddressControl.Populate(cmsEvent.Address);
+            eventStartDateTimePicker.Value = cmsEvent.StartTime;
+            eventEndDateTimePicker.Value = cmsEvent.EndTime;
+            eventOrganisationComboBox.SelectedIndex = organisations.IndexOf(cmsEvent.Organisation);
+            eventProgramComboBox.SelectedIndex = programs.IndexOf(cmsEvent.Program);
+            eventDescriptionTextBox.Text = cmsEvent.Description;
+            programContacts.Populate(cmsEvent.Contacts);
+            eventSaveButton.Enabled = true;
+            eventDeleteButton.Enabled = true;
+        }
+
+        private void eventListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (eventListView.SelectedIndices.Count > 0)
+            {
+                int selectedIndex = eventListView.SelectedIndices[0];
+                activeEvent = events[selectedIndex];
+                populateEventFields(activeEvent);
+            }
+            else
+            {
+                activeEvent = null;
+                clearEventFields();
             }
         }
     }

@@ -60,6 +60,16 @@
             this.programNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.programDescriptionColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventTabPage = new System.Windows.Forms.TabPage();
+            this.eventNewButton = new System.Windows.Forms.Button();
+            this.eventDeleteButton = new System.Windows.Forms.Button();
+            this.eventSaveButton = new System.Windows.Forms.Button();
+            this.eventEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.eventEndLabel = new System.Windows.Forms.Label();
+            this.eventProgramComboBox = new System.Windows.Forms.ComboBox();
+            this.eventOrganisationComboBox = new System.Windows.Forms.ComboBox();
+            this.eventProgramLabel = new System.Windows.Forms.Label();
+            this.eventOrganisationLabel = new System.Windows.Forms.Label();
+            this.eventStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.eventStartLabel = new System.Windows.Forms.Label();
             this.eventCapacityTextBox = new System.Windows.Forms.TextBox();
             this.eventCapacityLabel = new System.Windows.Forms.Label();
@@ -67,19 +77,10 @@
             this.eventNameLabel = new System.Windows.Forms.Label();
             this.eventListView = new System.Windows.Forms.ListView();
             this.eventNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.eventDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventOrganisationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventProgramColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.eventStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.eventOrganisationLabel = new System.Windows.Forms.Label();
-            this.eventProgramLabel = new System.Windows.Forms.Label();
-            this.eventOrganisationComboBox = new System.Windows.Forms.ComboBox();
-            this.eventProgramComboBox = new System.Windows.Forms.ComboBox();
-            this.eventEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.eventEndLabel = new System.Windows.Forms.Label();
-            this.eventNewButton = new System.Windows.Forms.Button();
-            this.eventDeleteButton = new System.Windows.Forms.Button();
-            this.eventSaveButton = new System.Windows.Forms.Button();
+            this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.eventDescriptionLabel = new System.Windows.Forms.Label();
             this.organisationContacts = new CMSportsControls.ContactsControl();
             this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
             this.programContacts = new CMSportsControls.ContactsControl();
@@ -104,6 +105,7 @@
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(1084, 582);
             this.mainTabControl.TabIndex = 0;
+            this.mainTabControl.SelectedIndexChanged += new System.EventHandler(this.mainTabControl_SelectedIndexChanged);
             // 
             // organisationsTabPage
             // 
@@ -303,6 +305,7 @@
             // 
             // programDeleteButton
             // 
+            this.programDeleteButton.Enabled = false;
             this.programDeleteButton.Location = new System.Drawing.Point(826, 6);
             this.programDeleteButton.Name = "programDeleteButton";
             this.programDeleteButton.Size = new System.Drawing.Size(113, 23);
@@ -313,6 +316,7 @@
             // 
             // programSaveButton
             // 
+            this.programSaveButton.Enabled = false;
             this.programSaveButton.Location = new System.Drawing.Point(697, 6);
             this.programSaveButton.Name = "programSaveButton";
             this.programSaveButton.Size = new System.Drawing.Size(113, 23);
@@ -400,6 +404,8 @@
             // 
             // eventTabPage
             // 
+            this.eventTabPage.Controls.Add(this.eventDescriptionTextBox);
+            this.eventTabPage.Controls.Add(this.eventDescriptionLabel);
             this.eventTabPage.Controls.Add(this.eventNewButton);
             this.eventTabPage.Controls.Add(this.eventDeleteButton);
             this.eventTabPage.Controls.Add(this.eventSaveButton);
@@ -425,6 +431,99 @@
             this.eventTabPage.TabIndex = 2;
             this.eventTabPage.Text = "Events";
             this.eventTabPage.UseVisualStyleBackColor = true;
+            // 
+            // eventNewButton
+            // 
+            this.eventNewButton.Location = new System.Drawing.Point(979, 525);
+            this.eventNewButton.Name = "eventNewButton";
+            this.eventNewButton.Size = new System.Drawing.Size(89, 23);
+            this.eventNewButton.TabIndex = 17;
+            this.eventNewButton.Text = "&New Event";
+            this.eventNewButton.UseVisualStyleBackColor = true;
+            // 
+            // eventDeleteButton
+            // 
+            this.eventDeleteButton.Enabled = false;
+            this.eventDeleteButton.Location = new System.Drawing.Point(884, 525);
+            this.eventDeleteButton.Name = "eventDeleteButton";
+            this.eventDeleteButton.Size = new System.Drawing.Size(89, 23);
+            this.eventDeleteButton.TabIndex = 16;
+            this.eventDeleteButton.Text = "&Delete Event";
+            this.eventDeleteButton.UseVisualStyleBackColor = false;
+            // 
+            // eventSaveButton
+            // 
+            this.eventSaveButton.Enabled = false;
+            this.eventSaveButton.Location = new System.Drawing.Point(789, 525);
+            this.eventSaveButton.Name = "eventSaveButton";
+            this.eventSaveButton.Size = new System.Drawing.Size(89, 23);
+            this.eventSaveButton.TabIndex = 15;
+            this.eventSaveButton.Text = "&Save Event";
+            this.eventSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // eventEndDateTimePicker
+            // 
+            this.eventEndDateTimePicker.Checked = false;
+            this.eventEndDateTimePicker.CustomFormat = "HH:mm ttMMMMdd, yyyy";
+            this.eventEndDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.eventEndDateTimePicker.Location = new System.Drawing.Point(498, 90);
+            this.eventEndDateTimePicker.Name = "eventEndDateTimePicker";
+            this.eventEndDateTimePicker.Size = new System.Drawing.Size(233, 20);
+            this.eventEndDateTimePicker.TabIndex = 8;
+            // 
+            // eventEndLabel
+            // 
+            this.eventEndLabel.AutoSize = true;
+            this.eventEndLabel.Location = new System.Drawing.Point(398, 93);
+            this.eventEndLabel.Name = "eventEndLabel";
+            this.eventEndLabel.Size = new System.Drawing.Size(52, 13);
+            this.eventEndLabel.TabIndex = 7;
+            this.eventEndLabel.Text = "E&nd Time";
+            // 
+            // eventProgramComboBox
+            // 
+            this.eventProgramComboBox.DisplayMember = "ToString()";
+            this.eventProgramComboBox.FormattingEnabled = true;
+            this.eventProgramComboBox.Location = new System.Drawing.Point(498, 143);
+            this.eventProgramComboBox.Name = "eventProgramComboBox";
+            this.eventProgramComboBox.Size = new System.Drawing.Size(233, 21);
+            this.eventProgramComboBox.TabIndex = 12;
+            // 
+            // eventOrganisationComboBox
+            // 
+            this.eventOrganisationComboBox.DisplayMember = "ToString()";
+            this.eventOrganisationComboBox.FormattingEnabled = true;
+            this.eventOrganisationComboBox.Location = new System.Drawing.Point(498, 116);
+            this.eventOrganisationComboBox.Name = "eventOrganisationComboBox";
+            this.eventOrganisationComboBox.Size = new System.Drawing.Size(233, 21);
+            this.eventOrganisationComboBox.TabIndex = 10;
+            // 
+            // eventProgramLabel
+            // 
+            this.eventProgramLabel.AutoSize = true;
+            this.eventProgramLabel.Location = new System.Drawing.Point(398, 146);
+            this.eventProgramLabel.Name = "eventProgramLabel";
+            this.eventProgramLabel.Size = new System.Drawing.Size(46, 13);
+            this.eventProgramLabel.TabIndex = 11;
+            this.eventProgramLabel.Text = "&Program";
+            // 
+            // eventOrganisationLabel
+            // 
+            this.eventOrganisationLabel.AutoSize = true;
+            this.eventOrganisationLabel.Location = new System.Drawing.Point(398, 119);
+            this.eventOrganisationLabel.Name = "eventOrganisationLabel";
+            this.eventOrganisationLabel.Size = new System.Drawing.Size(66, 13);
+            this.eventOrganisationLabel.TabIndex = 9;
+            this.eventOrganisationLabel.Text = "&Organisation";
+            // 
+            // eventStartDateTimePicker
+            // 
+            this.eventStartDateTimePicker.CustomFormat = "HH:mm ttMMMMdd, yyyy";
+            this.eventStartDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.eventStartDateTimePicker.Location = new System.Drawing.Point(498, 61);
+            this.eventStartDateTimePicker.Name = "eventStartDateTimePicker";
+            this.eventStartDateTimePicker.Size = new System.Drawing.Size(233, 20);
+            this.eventStartDateTimePicker.TabIndex = 6;
             // 
             // eventStartLabel
             // 
@@ -455,7 +554,7 @@
             // 
             this.eventNameTextBox.Location = new System.Drawing.Point(498, 6);
             this.eventNameTextBox.Name = "eventNameTextBox";
-            this.eventNameTextBox.Size = new System.Drawing.Size(233, 20);
+            this.eventNameTextBox.Size = new System.Drawing.Size(570, 20);
             this.eventNameTextBox.TabIndex = 2;
             // 
             // eventNameLabel
@@ -471,7 +570,6 @@
             // 
             this.eventListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.eventNameColumnHeader,
-            this.eventDateColumnHeader,
             this.eventOrganisationColumnHeader,
             this.eventProgramColumnHeader});
             this.eventListView.Dock = System.Windows.Forms.DockStyle.Left;
@@ -482,115 +580,39 @@
             this.eventListView.TabIndex = 0;
             this.eventListView.UseCompatibleStateImageBehavior = false;
             this.eventListView.View = System.Windows.Forms.View.Details;
+            this.eventListView.SelectedIndexChanged += new System.EventHandler(this.eventListView_SelectedIndexChanged);
             // 
             // eventNameColumnHeader
             // 
             this.eventNameColumnHeader.Text = "Name";
-            this.eventNameColumnHeader.Width = 100;
-            // 
-            // eventDateColumnHeader
-            // 
-            this.eventDateColumnHeader.Text = "Date";
-            this.eventDateColumnHeader.Width = 95;
+            this.eventNameColumnHeader.Width = 125;
             // 
             // eventOrganisationColumnHeader
             // 
             this.eventOrganisationColumnHeader.Text = "Organisation";
-            this.eventOrganisationColumnHeader.Width = 95;
+            this.eventOrganisationColumnHeader.Width = 130;
             // 
             // eventProgramColumnHeader
             // 
             this.eventProgramColumnHeader.Text = "Program";
-            this.eventProgramColumnHeader.Width = 95;
+            this.eventProgramColumnHeader.Width = 130;
             // 
-            // eventStartDateTimePicker
+            // eventDescriptionTextBox
             // 
-            this.eventStartDateTimePicker.CustomFormat = "HH:mm ttMMMMdd, yyyy";
-            this.eventStartDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.eventStartDateTimePicker.Location = new System.Drawing.Point(498, 61);
-            this.eventStartDateTimePicker.Name = "eventStartDateTimePicker";
-            this.eventStartDateTimePicker.Size = new System.Drawing.Size(233, 20);
-            this.eventStartDateTimePicker.TabIndex = 6;
+            this.eventDescriptionTextBox.Location = new System.Drawing.Point(401, 183);
+            this.eventDescriptionTextBox.Multiline = true;
+            this.eventDescriptionTextBox.Name = "eventDescriptionTextBox";
+            this.eventDescriptionTextBox.Size = new System.Drawing.Size(667, 96);
+            this.eventDescriptionTextBox.TabIndex = 19;
             // 
-            // eventOrganisationLabel
+            // eventDescriptionLabel
             // 
-            this.eventOrganisationLabel.AutoSize = true;
-            this.eventOrganisationLabel.Location = new System.Drawing.Point(398, 119);
-            this.eventOrganisationLabel.Name = "eventOrganisationLabel";
-            this.eventOrganisationLabel.Size = new System.Drawing.Size(66, 13);
-            this.eventOrganisationLabel.TabIndex = 9;
-            this.eventOrganisationLabel.Text = "&Organisation";
-            // 
-            // eventProgramLabel
-            // 
-            this.eventProgramLabel.AutoSize = true;
-            this.eventProgramLabel.Location = new System.Drawing.Point(398, 146);
-            this.eventProgramLabel.Name = "eventProgramLabel";
-            this.eventProgramLabel.Size = new System.Drawing.Size(46, 13);
-            this.eventProgramLabel.TabIndex = 11;
-            this.eventProgramLabel.Text = "&Program";
-            // 
-            // eventOrganisationComboBox
-            // 
-            this.eventOrganisationComboBox.FormattingEnabled = true;
-            this.eventOrganisationComboBox.Location = new System.Drawing.Point(498, 116);
-            this.eventOrganisationComboBox.Name = "eventOrganisationComboBox";
-            this.eventOrganisationComboBox.Size = new System.Drawing.Size(233, 21);
-            this.eventOrganisationComboBox.TabIndex = 10;
-            // 
-            // eventProgramComboBox
-            // 
-            this.eventProgramComboBox.FormattingEnabled = true;
-            this.eventProgramComboBox.Location = new System.Drawing.Point(498, 143);
-            this.eventProgramComboBox.Name = "eventProgramComboBox";
-            this.eventProgramComboBox.Size = new System.Drawing.Size(233, 21);
-            this.eventProgramComboBox.TabIndex = 12;
-            // 
-            // eventEndDateTimePicker
-            // 
-            this.eventEndDateTimePicker.Checked = false;
-            this.eventEndDateTimePicker.CustomFormat = "HH:mm ttMMMMdd, yyyy";
-            this.eventEndDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.eventEndDateTimePicker.Location = new System.Drawing.Point(498, 90);
-            this.eventEndDateTimePicker.Name = "eventEndDateTimePicker";
-            this.eventEndDateTimePicker.Size = new System.Drawing.Size(233, 20);
-            this.eventEndDateTimePicker.TabIndex = 8;
-            // 
-            // eventEndLabel
-            // 
-            this.eventEndLabel.AutoSize = true;
-            this.eventEndLabel.Location = new System.Drawing.Point(398, 93);
-            this.eventEndLabel.Name = "eventEndLabel";
-            this.eventEndLabel.Size = new System.Drawing.Size(52, 13);
-            this.eventEndLabel.TabIndex = 7;
-            this.eventEndLabel.Text = "E&nd Time";
-            // 
-            // eventNewButton
-            // 
-            this.eventNewButton.Location = new System.Drawing.Point(979, 148);
-            this.eventNewButton.Name = "eventNewButton";
-            this.eventNewButton.Size = new System.Drawing.Size(89, 23);
-            this.eventNewButton.TabIndex = 17;
-            this.eventNewButton.Text = "&New Event";
-            this.eventNewButton.UseVisualStyleBackColor = true;
-            // 
-            // eventDeleteButton
-            // 
-            this.eventDeleteButton.Location = new System.Drawing.Point(858, 148);
-            this.eventDeleteButton.Name = "eventDeleteButton";
-            this.eventDeleteButton.Size = new System.Drawing.Size(89, 23);
-            this.eventDeleteButton.TabIndex = 16;
-            this.eventDeleteButton.Text = "&Delete Event";
-            this.eventDeleteButton.UseVisualStyleBackColor = false;
-            // 
-            // eventSaveButton
-            // 
-            this.eventSaveButton.Location = new System.Drawing.Point(737, 148);
-            this.eventSaveButton.Name = "eventSaveButton";
-            this.eventSaveButton.Size = new System.Drawing.Size(89, 23);
-            this.eventSaveButton.TabIndex = 15;
-            this.eventSaveButton.Text = "&Save Event";
-            this.eventSaveButton.UseVisualStyleBackColor = true;
+            this.eventDescriptionLabel.AutoSize = true;
+            this.eventDescriptionLabel.Location = new System.Drawing.Point(398, 167);
+            this.eventDescriptionLabel.Name = "eventDescriptionLabel";
+            this.eventDescriptionLabel.Size = new System.Drawing.Size(91, 13);
+            this.eventDescriptionLabel.TabIndex = 18;
+            this.eventDescriptionLabel.Text = "Event D&escription";
             // 
             // organisationContacts
             // 
@@ -615,14 +637,14 @@
             // 
             // eventContacts
             // 
-            this.eventContacts.Location = new System.Drawing.Point(398, 177);
+            this.eventContacts.Location = new System.Drawing.Point(398, 285);
             this.eventContacts.Name = "eventContacts";
             this.eventContacts.Size = new System.Drawing.Size(672, 234);
             this.eventContacts.TabIndex = 14;
             // 
             // eventAddressControl
             // 
-            this.eventAddressControl.Location = new System.Drawing.Point(737, 6);
+            this.eventAddressControl.Location = new System.Drawing.Point(737, 28);
             this.eventAddressControl.Name = "eventAddressControl";
             this.eventAddressControl.Size = new System.Drawing.Size(333, 136);
             this.eventAddressControl.TabIndex = 13;
@@ -689,7 +711,6 @@
         private System.Windows.Forms.TabPage eventTabPage;
         private System.Windows.Forms.ListView eventListView;
         private System.Windows.Forms.ColumnHeader eventNameColumnHeader;
-        private System.Windows.Forms.ColumnHeader eventDateColumnHeader;
         private System.Windows.Forms.ColumnHeader eventOrganisationColumnHeader;
         private System.Windows.Forms.ColumnHeader eventProgramColumnHeader;
         private CMSportsControls.ContactsControl eventContacts;
@@ -701,7 +722,6 @@
         private System.Windows.Forms.Label eventStartLabel;
         private System.Windows.Forms.DateTimePicker eventStartDateTimePicker;
         private System.Windows.Forms.ComboBox eventProgramComboBox;
-        private System.Windows.Forms.ComboBox eventOrganisationComboBox;
         private System.Windows.Forms.Label eventProgramLabel;
         private System.Windows.Forms.Label eventOrganisationLabel;
         private System.Windows.Forms.DateTimePicker eventEndDateTimePicker;
@@ -709,6 +729,9 @@
         private System.Windows.Forms.Button eventNewButton;
         private System.Windows.Forms.Button eventDeleteButton;
         private System.Windows.Forms.Button eventSaveButton;
+        private System.Windows.Forms.ComboBox eventOrganisationComboBox;
+        private System.Windows.Forms.TextBox eventDescriptionTextBox;
+        private System.Windows.Forms.Label eventDescriptionLabel;
     }
 }
 
