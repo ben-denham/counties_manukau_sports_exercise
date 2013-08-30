@@ -21,8 +21,11 @@ namespace CMSports
 
         private List<Organisation> organisations = new List<Organisation>();
         private List<Programme> programs = new List<Programme>();
+        private List<Event> events = new List<Event>();
+
         private Organisation activeOrganisation;
         private Programme activeProgram;
+        private Event activeEvent;
 
         private void MainForm_Load(object sender, EventArgs e)
         {

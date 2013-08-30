@@ -57,6 +57,7 @@
             // 
             // removeButton
             // 
+            this.removeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.removeButton.Enabled = false;
             this.removeButton.Location = new System.Drawing.Point(571, 205);
             this.removeButton.Name = "removeButton";
@@ -68,6 +69,7 @@
             // 
             // editButton
             // 
+            this.editButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.editButton.Enabled = false;
             this.editButton.Location = new System.Drawing.Point(470, 205);
             this.editButton.Name = "editButton";
@@ -79,6 +81,7 @@
             // 
             // addButton
             // 
+            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addButton.Enabled = false;
             this.addButton.Location = new System.Drawing.Point(369, 205);
             this.addButton.Name = "addButton";

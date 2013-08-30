@@ -10,7 +10,8 @@ namespace CMSportsObjects
         private string name;
         private Address address;
         private int capacity;
-        private DateTime date;
+        private DateTime startTime;
+        private DateTime endTime;
         private List<Contact> contacts;
         private Organisation organisation;
         private Programme program;
@@ -20,13 +21,14 @@ namespace CMSportsObjects
             contacts = new List<Contact>();
         }
 
-        public Event(string name, Address address, int capacity, DateTime date, Organisation organisation, Programme program)
+        public Event(string name, Address address, int capacity, DateTime startTime, DateTime endTime, Organisation organisation, Programme program)
         {
             contacts = new List<Contact>();
             Name = name;
             Address = address;
             Capacity = capacity;
-            Date = date;
+            StartTime = startTime;
+            EndTime = endTime;
             Organisation = organisation;
             Program = program;
         }
@@ -67,15 +69,27 @@ namespace CMSportsObjects
             }
         }
 
-        public DateTime Date
+        public DateTime StartTime
         {
             get
             {
-                return date;
+                return startTime;
             }
             set
             {
-                date = value;
+                startTime = value;
+            }
+        }
+
+        public DateTime EndTime
+        {
+            get
+            {
+                return endTime;
+            }
+            set
+            {
+                endTime = value;
             }
         }
 

@@ -38,14 +38,12 @@
             this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.newClubButton = new System.Windows.Forms.Button();
             this.newSchoolButton = new System.Windows.Forms.Button();
-            this.organisationContacts = new CMSportsControls.ContactsControl();
             this.organisationEventsGroupBox = new System.Windows.Forms.GroupBox();
             this.organisationEventsListView = new System.Windows.Forms.ListView();
             this.organisationDeleteButton = new System.Windows.Forms.Button();
             this.organisationSaveButton = new System.Windows.Forms.Button();
             this.organisationSizeTextBox = new System.Windows.Forms.TextBox();
             this.organisationSizeLabel = new System.Windows.Forms.Label();
-            this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
             this.organisationNameTextBox = new System.Windows.Forms.TextBox();
             this.organisationNameLabel = new System.Windows.Forms.Label();
             this.programsTabPage = new System.Windows.Forms.TabPage();
@@ -58,16 +56,35 @@
             this.programDescriptionLabel = new System.Windows.Forms.Label();
             this.programNameTextBox = new System.Windows.Forms.TextBox();
             this.programNameLabel = new System.Windows.Forms.Label();
-            this.programContacts = new CMSportsControls.ContactsControl();
             this.programListView = new System.Windows.Forms.ListView();
             this.programNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.programDescriptionColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventTabPage = new System.Windows.Forms.TabPage();
+            this.eventStartLabel = new System.Windows.Forms.Label();
+            this.eventCapacityTextBox = new System.Windows.Forms.TextBox();
+            this.eventCapacityLabel = new System.Windows.Forms.Label();
+            this.eventNameTextBox = new System.Windows.Forms.TextBox();
+            this.eventNameLabel = new System.Windows.Forms.Label();
             this.eventListView = new System.Windows.Forms.ListView();
             this.eventNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventDateColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventOrganisationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventProgramColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.eventStartDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.eventOrganisationLabel = new System.Windows.Forms.Label();
+            this.eventProgramLabel = new System.Windows.Forms.Label();
+            this.eventOrganisationComboBox = new System.Windows.Forms.ComboBox();
+            this.eventProgramComboBox = new System.Windows.Forms.ComboBox();
+            this.eventEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.eventEndLabel = new System.Windows.Forms.Label();
+            this.eventNewButton = new System.Windows.Forms.Button();
+            this.eventDeleteButton = new System.Windows.Forms.Button();
+            this.eventSaveButton = new System.Windows.Forms.Button();
+            this.organisationContacts = new CMSportsControls.ContactsControl();
+            this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
+            this.programContacts = new CMSportsControls.ContactsControl();
+            this.eventContacts = new CMSportsControls.ContactsControl();
+            this.eventAddressControl = new CMSportsControls.AddressControl();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
             this.organisationEventsGroupBox.SuspendLayout();
@@ -181,13 +198,6 @@
             this.newSchoolButton.UseVisualStyleBackColor = true;
             this.newSchoolButton.Click += new System.EventHandler(this.newSchoolButton_Click);
             // 
-            // organisationContacts
-            // 
-            this.organisationContacts.Location = new System.Drawing.Point(398, 148);
-            this.organisationContacts.Name = "organisationContacts";
-            this.organisationContacts.Size = new System.Drawing.Size(672, 234);
-            this.organisationContacts.TabIndex = 6;
-            // 
             // organisationEventsGroupBox
             // 
             this.organisationEventsGroupBox.Controls.Add(this.organisationEventsListView);
@@ -245,13 +255,6 @@
             this.organisationSizeLabel.TabIndex = 3;
             this.organisationSizeLabel.Text = "Organisation S&ize";
             // 
-            // organisationAddressAddressControl
-            // 
-            this.organisationAddressAddressControl.Location = new System.Drawing.Point(737, 6);
-            this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
-            this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
-            this.organisationAddressAddressControl.TabIndex = 5;
-            // 
             // organisationNameTextBox
             // 
             this.organisationNameTextBox.Location = new System.Drawing.Point(498, 6);
@@ -293,7 +296,7 @@
             this.programNewButton.Location = new System.Drawing.Point(954, 6);
             this.programNewButton.Name = "programNewButton";
             this.programNewButton.Size = new System.Drawing.Size(113, 23);
-            this.programNewButton.TabIndex = 11;
+            this.programNewButton.TabIndex = 9;
             this.programNewButton.Text = "&New Program";
             this.programNewButton.UseVisualStyleBackColor = true;
             this.programNewButton.Click += new System.EventHandler(this.programNewButton_Click);
@@ -303,7 +306,7 @@
             this.programDeleteButton.Location = new System.Drawing.Point(826, 6);
             this.programDeleteButton.Name = "programDeleteButton";
             this.programDeleteButton.Size = new System.Drawing.Size(113, 23);
-            this.programDeleteButton.TabIndex = 10;
+            this.programDeleteButton.TabIndex = 8;
             this.programDeleteButton.Text = "&Delete Program";
             this.programDeleteButton.UseVisualStyleBackColor = true;
             this.programDeleteButton.Click += new System.EventHandler(this.programDeleteButton_Click);
@@ -313,7 +316,7 @@
             this.programSaveButton.Location = new System.Drawing.Point(697, 6);
             this.programSaveButton.Name = "programSaveButton";
             this.programSaveButton.Size = new System.Drawing.Size(113, 23);
-            this.programSaveButton.TabIndex = 9;
+            this.programSaveButton.TabIndex = 7;
             this.programSaveButton.Text = "&Save Program";
             this.programSaveButton.UseVisualStyleBackColor = true;
             this.programSaveButton.Click += new System.EventHandler(this.programSaveButton_Click);
@@ -324,7 +327,7 @@
             this.programEventsGroupBox.Location = new System.Drawing.Point(398, 388);
             this.programEventsGroupBox.Name = "programEventsGroupBox";
             this.programEventsGroupBox.Size = new System.Drawing.Size(672, 162);
-            this.programEventsGroupBox.TabIndex = 8;
+            this.programEventsGroupBox.TabIndex = 6;
             this.programEventsGroupBox.TabStop = false;
             this.programEventsGroupBox.Text = "&Events";
             // 
@@ -343,7 +346,7 @@
             this.programDescriptionTextBox.Multiline = true;
             this.programDescriptionTextBox.Name = "programDescriptionTextBox";
             this.programDescriptionTextBox.Size = new System.Drawing.Size(667, 97);
-            this.programDescriptionTextBox.TabIndex = 5;
+            this.programDescriptionTextBox.TabIndex = 4;
             // 
             // programDescriptionLabel
             // 
@@ -351,7 +354,7 @@
             this.programDescriptionLabel.Location = new System.Drawing.Point(398, 29);
             this.programDescriptionLabel.Name = "programDescriptionLabel";
             this.programDescriptionLabel.Size = new System.Drawing.Size(102, 13);
-            this.programDescriptionLabel.TabIndex = 4;
+            this.programDescriptionLabel.TabIndex = 3;
             this.programDescriptionLabel.Text = "Program D&escription";
             // 
             // programNameTextBox
@@ -359,7 +362,7 @@
             this.programNameTextBox.Location = new System.Drawing.Point(481, 6);
             this.programNameTextBox.Name = "programNameTextBox";
             this.programNameTextBox.Size = new System.Drawing.Size(210, 20);
-            this.programNameTextBox.TabIndex = 3;
+            this.programNameTextBox.TabIndex = 2;
             // 
             // programNameLabel
             // 
@@ -367,15 +370,8 @@
             this.programNameLabel.Location = new System.Drawing.Point(398, 9);
             this.programNameLabel.Name = "programNameLabel";
             this.programNameLabel.Size = new System.Drawing.Size(77, 13);
-            this.programNameLabel.TabIndex = 2;
+            this.programNameLabel.TabIndex = 1;
             this.programNameLabel.Text = "Program &Name";
-            // 
-            // programContacts
-            // 
-            this.programContacts.Location = new System.Drawing.Point(398, 148);
-            this.programContacts.Name = "programContacts";
-            this.programContacts.Size = new System.Drawing.Size(672, 234);
-            this.programContacts.TabIndex = 1;
             // 
             // programListView
             // 
@@ -404,6 +400,23 @@
             // 
             // eventTabPage
             // 
+            this.eventTabPage.Controls.Add(this.eventNewButton);
+            this.eventTabPage.Controls.Add(this.eventDeleteButton);
+            this.eventTabPage.Controls.Add(this.eventSaveButton);
+            this.eventTabPage.Controls.Add(this.eventEndDateTimePicker);
+            this.eventTabPage.Controls.Add(this.eventEndLabel);
+            this.eventTabPage.Controls.Add(this.eventProgramComboBox);
+            this.eventTabPage.Controls.Add(this.eventOrganisationComboBox);
+            this.eventTabPage.Controls.Add(this.eventProgramLabel);
+            this.eventTabPage.Controls.Add(this.eventOrganisationLabel);
+            this.eventTabPage.Controls.Add(this.eventStartDateTimePicker);
+            this.eventTabPage.Controls.Add(this.eventStartLabel);
+            this.eventTabPage.Controls.Add(this.eventCapacityTextBox);
+            this.eventTabPage.Controls.Add(this.eventCapacityLabel);
+            this.eventTabPage.Controls.Add(this.eventContacts);
+            this.eventTabPage.Controls.Add(this.eventNameTextBox);
+            this.eventTabPage.Controls.Add(this.eventNameLabel);
+            this.eventTabPage.Controls.Add(this.eventAddressControl);
             this.eventTabPage.Controls.Add(this.eventListView);
             this.eventTabPage.Location = new System.Drawing.Point(4, 22);
             this.eventTabPage.Name = "eventTabPage";
@@ -412,6 +425,47 @@
             this.eventTabPage.TabIndex = 2;
             this.eventTabPage.Text = "Events";
             this.eventTabPage.UseVisualStyleBackColor = true;
+            // 
+            // eventStartLabel
+            // 
+            this.eventStartLabel.AutoSize = true;
+            this.eventStartLabel.Location = new System.Drawing.Point(398, 64);
+            this.eventStartLabel.Name = "eventStartLabel";
+            this.eventStartLabel.Size = new System.Drawing.Size(55, 13);
+            this.eventStartLabel.TabIndex = 5;
+            this.eventStartLabel.Text = "S&tart Time";
+            // 
+            // eventCapacityTextBox
+            // 
+            this.eventCapacityTextBox.Location = new System.Drawing.Point(498, 32);
+            this.eventCapacityTextBox.Name = "eventCapacityTextBox";
+            this.eventCapacityTextBox.Size = new System.Drawing.Size(233, 20);
+            this.eventCapacityTextBox.TabIndex = 4;
+            // 
+            // eventCapacityLabel
+            // 
+            this.eventCapacityLabel.AutoSize = true;
+            this.eventCapacityLabel.Location = new System.Drawing.Point(398, 35);
+            this.eventCapacityLabel.Name = "eventCapacityLabel";
+            this.eventCapacityLabel.Size = new System.Drawing.Size(48, 13);
+            this.eventCapacityLabel.TabIndex = 3;
+            this.eventCapacityLabel.Text = "&Capacity";
+            // 
+            // eventNameTextBox
+            // 
+            this.eventNameTextBox.Location = new System.Drawing.Point(498, 6);
+            this.eventNameTextBox.Name = "eventNameTextBox";
+            this.eventNameTextBox.Size = new System.Drawing.Size(233, 20);
+            this.eventNameTextBox.TabIndex = 2;
+            // 
+            // eventNameLabel
+            // 
+            this.eventNameLabel.AutoSize = true;
+            this.eventNameLabel.Location = new System.Drawing.Point(398, 9);
+            this.eventNameLabel.Name = "eventNameLabel";
+            this.eventNameLabel.Size = new System.Drawing.Size(66, 13);
+            this.eventNameLabel.TabIndex = 1;
+            this.eventNameLabel.Text = "Event &Name";
             // 
             // eventListView
             // 
@@ -425,7 +479,7 @@
             this.eventListView.Location = new System.Drawing.Point(3, 3);
             this.eventListView.Name = "eventListView";
             this.eventListView.Size = new System.Drawing.Size(389, 550);
-            this.eventListView.TabIndex = 1;
+            this.eventListView.TabIndex = 0;
             this.eventListView.UseCompatibleStateImageBehavior = false;
             this.eventListView.View = System.Windows.Forms.View.Details;
             // 
@@ -449,6 +503,130 @@
             this.eventProgramColumnHeader.Text = "Program";
             this.eventProgramColumnHeader.Width = 95;
             // 
+            // eventStartDateTimePicker
+            // 
+            this.eventStartDateTimePicker.CustomFormat = "HH:mm ttMMMMdd, yyyy";
+            this.eventStartDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.eventStartDateTimePicker.Location = new System.Drawing.Point(498, 61);
+            this.eventStartDateTimePicker.Name = "eventStartDateTimePicker";
+            this.eventStartDateTimePicker.Size = new System.Drawing.Size(233, 20);
+            this.eventStartDateTimePicker.TabIndex = 6;
+            // 
+            // eventOrganisationLabel
+            // 
+            this.eventOrganisationLabel.AutoSize = true;
+            this.eventOrganisationLabel.Location = new System.Drawing.Point(398, 119);
+            this.eventOrganisationLabel.Name = "eventOrganisationLabel";
+            this.eventOrganisationLabel.Size = new System.Drawing.Size(66, 13);
+            this.eventOrganisationLabel.TabIndex = 9;
+            this.eventOrganisationLabel.Text = "&Organisation";
+            // 
+            // eventProgramLabel
+            // 
+            this.eventProgramLabel.AutoSize = true;
+            this.eventProgramLabel.Location = new System.Drawing.Point(398, 146);
+            this.eventProgramLabel.Name = "eventProgramLabel";
+            this.eventProgramLabel.Size = new System.Drawing.Size(46, 13);
+            this.eventProgramLabel.TabIndex = 11;
+            this.eventProgramLabel.Text = "&Program";
+            // 
+            // eventOrganisationComboBox
+            // 
+            this.eventOrganisationComboBox.FormattingEnabled = true;
+            this.eventOrganisationComboBox.Location = new System.Drawing.Point(498, 116);
+            this.eventOrganisationComboBox.Name = "eventOrganisationComboBox";
+            this.eventOrganisationComboBox.Size = new System.Drawing.Size(233, 21);
+            this.eventOrganisationComboBox.TabIndex = 10;
+            // 
+            // eventProgramComboBox
+            // 
+            this.eventProgramComboBox.FormattingEnabled = true;
+            this.eventProgramComboBox.Location = new System.Drawing.Point(498, 143);
+            this.eventProgramComboBox.Name = "eventProgramComboBox";
+            this.eventProgramComboBox.Size = new System.Drawing.Size(233, 21);
+            this.eventProgramComboBox.TabIndex = 12;
+            // 
+            // eventEndDateTimePicker
+            // 
+            this.eventEndDateTimePicker.Checked = false;
+            this.eventEndDateTimePicker.CustomFormat = "HH:mm ttMMMMdd, yyyy";
+            this.eventEndDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.eventEndDateTimePicker.Location = new System.Drawing.Point(498, 90);
+            this.eventEndDateTimePicker.Name = "eventEndDateTimePicker";
+            this.eventEndDateTimePicker.Size = new System.Drawing.Size(233, 20);
+            this.eventEndDateTimePicker.TabIndex = 8;
+            // 
+            // eventEndLabel
+            // 
+            this.eventEndLabel.AutoSize = true;
+            this.eventEndLabel.Location = new System.Drawing.Point(398, 93);
+            this.eventEndLabel.Name = "eventEndLabel";
+            this.eventEndLabel.Size = new System.Drawing.Size(52, 13);
+            this.eventEndLabel.TabIndex = 7;
+            this.eventEndLabel.Text = "E&nd Time";
+            // 
+            // eventNewButton
+            // 
+            this.eventNewButton.Location = new System.Drawing.Point(979, 148);
+            this.eventNewButton.Name = "eventNewButton";
+            this.eventNewButton.Size = new System.Drawing.Size(89, 23);
+            this.eventNewButton.TabIndex = 17;
+            this.eventNewButton.Text = "&New Event";
+            this.eventNewButton.UseVisualStyleBackColor = true;
+            // 
+            // eventDeleteButton
+            // 
+            this.eventDeleteButton.Location = new System.Drawing.Point(858, 148);
+            this.eventDeleteButton.Name = "eventDeleteButton";
+            this.eventDeleteButton.Size = new System.Drawing.Size(89, 23);
+            this.eventDeleteButton.TabIndex = 16;
+            this.eventDeleteButton.Text = "&Delete Event";
+            this.eventDeleteButton.UseVisualStyleBackColor = false;
+            // 
+            // eventSaveButton
+            // 
+            this.eventSaveButton.Location = new System.Drawing.Point(737, 148);
+            this.eventSaveButton.Name = "eventSaveButton";
+            this.eventSaveButton.Size = new System.Drawing.Size(89, 23);
+            this.eventSaveButton.TabIndex = 15;
+            this.eventSaveButton.Text = "&Save Event";
+            this.eventSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // organisationContacts
+            // 
+            this.organisationContacts.Location = new System.Drawing.Point(398, 148);
+            this.organisationContacts.Name = "organisationContacts";
+            this.organisationContacts.Size = new System.Drawing.Size(672, 234);
+            this.organisationContacts.TabIndex = 6;
+            // 
+            // organisationAddressAddressControl
+            // 
+            this.organisationAddressAddressControl.Location = new System.Drawing.Point(737, 6);
+            this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
+            this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
+            this.organisationAddressAddressControl.TabIndex = 5;
+            // 
+            // programContacts
+            // 
+            this.programContacts.Location = new System.Drawing.Point(398, 148);
+            this.programContacts.Name = "programContacts";
+            this.programContacts.Size = new System.Drawing.Size(672, 234);
+            this.programContacts.TabIndex = 5;
+            // 
+            // eventContacts
+            // 
+            this.eventContacts.Location = new System.Drawing.Point(398, 177);
+            this.eventContacts.Name = "eventContacts";
+            this.eventContacts.Size = new System.Drawing.Size(672, 234);
+            this.eventContacts.TabIndex = 14;
+            // 
+            // eventAddressControl
+            // 
+            this.eventAddressControl.Location = new System.Drawing.Point(737, 6);
+            this.eventAddressControl.Name = "eventAddressControl";
+            this.eventAddressControl.Size = new System.Drawing.Size(333, 136);
+            this.eventAddressControl.TabIndex = 13;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,6 +645,7 @@
             this.programsTabPage.PerformLayout();
             this.programEventsGroupBox.ResumeLayout(false);
             this.eventTabPage.ResumeLayout(false);
+            this.eventTabPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -513,6 +692,23 @@
         private System.Windows.Forms.ColumnHeader eventDateColumnHeader;
         private System.Windows.Forms.ColumnHeader eventOrganisationColumnHeader;
         private System.Windows.Forms.ColumnHeader eventProgramColumnHeader;
+        private CMSportsControls.ContactsControl eventContacts;
+        private System.Windows.Forms.TextBox eventNameTextBox;
+        private System.Windows.Forms.Label eventNameLabel;
+        private CMSportsControls.AddressControl eventAddressControl;
+        private System.Windows.Forms.TextBox eventCapacityTextBox;
+        private System.Windows.Forms.Label eventCapacityLabel;
+        private System.Windows.Forms.Label eventStartLabel;
+        private System.Windows.Forms.DateTimePicker eventStartDateTimePicker;
+        private System.Windows.Forms.ComboBox eventProgramComboBox;
+        private System.Windows.Forms.ComboBox eventOrganisationComboBox;
+        private System.Windows.Forms.Label eventProgramLabel;
+        private System.Windows.Forms.Label eventOrganisationLabel;
+        private System.Windows.Forms.DateTimePicker eventEndDateTimePicker;
+        private System.Windows.Forms.Label eventEndLabel;
+        private System.Windows.Forms.Button eventNewButton;
+        private System.Windows.Forms.Button eventDeleteButton;
+        private System.Windows.Forms.Button eventSaveButton;
     }
 }
 
