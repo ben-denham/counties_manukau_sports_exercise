@@ -87,7 +87,7 @@ namespace CMSports
                     }
                     break;
                 case 3:
-                    
+                    refreshReports();
                     break;
                     
             }
@@ -403,5 +403,31 @@ namespace CMSports
                 clearEventFields();
             }
         }
+
+        /* Reports Tab */
+
+        private void refreshReports()
+        {
+            calculateOrganisationStatistics();
+        }
+
+        private void calculateOrganisationStatistics()
+        {
+            // Number of Organisations
+            numberOfOrgsTextBox.Text = organisations.Count().ToString();
+            // Organisation Averages
+            int totalSize = 0;
+            int totalEvents = 0;
+            foreach (Organisation organisation in organisations)
+            {
+                totalSize += organisation.Size;
+                totalEvents += organisation.Events.Count();
+            }
+            int averageSize = totalSize / organisations.Count();
+            int averageEvents = totalEvents / organisations.Count();
+            averageOrgSizeTextBox.Text = averageSize.ToString();
+            averageNumberOfEventsPerOrgTextBox.Text = averageEvents.ToString();
+        }
+
     }
 }

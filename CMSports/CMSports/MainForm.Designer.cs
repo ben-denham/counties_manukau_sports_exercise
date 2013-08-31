@@ -85,10 +85,55 @@
             this.eventContacts = new CMSportsControls.ContactsControl();
             this.eventAddressControl = new CMSportsControls.AddressControl();
             this.reportsTabPage = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numberOfOrgsTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.averageNumberOfEventsPerOrgTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.averageOrgSizeTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.organisationGroupBox = new System.Windows.Forms.GroupBox();
+            this.programGroupBox = new System.Windows.Forms.GroupBox();
+            this.eventGroupBox = new System.Windows.Forms.GroupBox();
+            this.schoolGroupBox = new System.Windows.Forms.GroupBox();
+            this.clubGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
             this.programsTabPage.SuspendLayout();
             this.eventsTabPage.SuspendLayout();
+            this.reportsTabPage.SuspendLayout();
+            this.organisationGroupBox.SuspendLayout();
+            this.programGroupBox.SuspendLayout();
+            this.eventGroupBox.SuspendLayout();
+            this.schoolGroupBox.SuspendLayout();
+            this.clubGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTabControl
@@ -628,6 +673,9 @@
             // 
             // reportsTabPage
             // 
+            this.reportsTabPage.Controls.Add(this.programGroupBox);
+            this.reportsTabPage.Controls.Add(this.organisationGroupBox);
+            this.reportsTabPage.Controls.Add(this.eventGroupBox);
             this.reportsTabPage.Location = new System.Drawing.Point(4, 22);
             this.reportsTabPage.Name = "reportsTabPage";
             this.reportsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -635,6 +683,359 @@
             this.reportsTabPage.TabIndex = 3;
             this.reportsTabPage.Text = "Reports";
             this.reportsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Number of organisations";
+            // 
+            // numberOfOrgsTextBox
+            // 
+            this.numberOfOrgsTextBox.Location = new System.Drawing.Point(146, 21);
+            this.numberOfOrgsTextBox.Name = "numberOfOrgsTextBox";
+            this.numberOfOrgsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numberOfOrgsTextBox.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Number of programs";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(112, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Number of events";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(123, 23);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(263, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Average number of events per organisation";
+            // 
+            // averageNumberOfEventsPerOrgTextBox
+            // 
+            this.averageNumberOfEventsPerOrgTextBox.Location = new System.Drawing.Point(479, 21);
+            this.averageNumberOfEventsPerOrgTextBox.Name = "averageNumberOfEventsPerOrgTextBox";
+            this.averageNumberOfEventsPerOrgTextBox.Size = new System.Drawing.Size(100, 20);
+            this.averageNumberOfEventsPerOrgTextBox.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(191, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Average number of events per program";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(222, 44);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Average length of events";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(149, 49);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Longest event";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(123, 77);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Shortest event";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(123, 101);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Number of clubs";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(140, 20);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Number of schools";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(123, 27);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 50);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Average organisation size";
+            // 
+            // averageOrgSizeTextBox
+            // 
+            this.averageOrgSizeTextBox.Location = new System.Drawing.Point(146, 47);
+            this.averageOrgSizeTextBox.Name = "averageOrgSizeTextBox";
+            this.averageOrgSizeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.averageOrgSizeTextBox.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 51);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Average club size";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(140, 48);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(100, 20);
+            this.textBox12.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(17, 56);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Average school size";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(125, 53);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 20);
+            this.textBox13.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 82);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 13);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Largest school";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(125, 79);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(18, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Largest club";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(140, 74);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 20);
+            this.textBox15.TabIndex = 1;
+            // 
+            // organisationGroupBox
+            // 
+            this.organisationGroupBox.Controls.Add(this.label4);
+            this.organisationGroupBox.Controls.Add(this.averageNumberOfEventsPerOrgTextBox);
+            this.organisationGroupBox.Controls.Add(this.schoolGroupBox);
+            this.organisationGroupBox.Controls.Add(this.clubGroupBox);
+            this.organisationGroupBox.Controls.Add(this.label1);
+            this.organisationGroupBox.Controls.Add(this.numberOfOrgsTextBox);
+            this.organisationGroupBox.Controls.Add(this.label11);
+            this.organisationGroupBox.Controls.Add(this.averageOrgSizeTextBox);
+            this.organisationGroupBox.Location = new System.Drawing.Point(6, 6);
+            this.organisationGroupBox.Name = "organisationGroupBox";
+            this.organisationGroupBox.Size = new System.Drawing.Size(1062, 263);
+            this.organisationGroupBox.TabIndex = 2;
+            this.organisationGroupBox.TabStop = false;
+            this.organisationGroupBox.Text = "Organisation Statistics";
+            // 
+            // programGroupBox
+            // 
+            this.programGroupBox.Controls.Add(this.label2);
+            this.programGroupBox.Controls.Add(this.textBox2);
+            this.programGroupBox.Controls.Add(this.label5);
+            this.programGroupBox.Controls.Add(this.textBox5);
+            this.programGroupBox.Location = new System.Drawing.Point(6, 275);
+            this.programGroupBox.Name = "programGroupBox";
+            this.programGroupBox.Size = new System.Drawing.Size(549, 275);
+            this.programGroupBox.TabIndex = 2;
+            this.programGroupBox.TabStop = false;
+            this.programGroupBox.Text = "Program Statistics";
+            // 
+            // eventGroupBox
+            // 
+            this.eventGroupBox.Controls.Add(this.label3);
+            this.eventGroupBox.Controls.Add(this.textBox3);
+            this.eventGroupBox.Controls.Add(this.label6);
+            this.eventGroupBox.Controls.Add(this.textBox6);
+            this.eventGroupBox.Controls.Add(this.label7);
+            this.eventGroupBox.Controls.Add(this.label8);
+            this.eventGroupBox.Controls.Add(this.textBox7);
+            this.eventGroupBox.Controls.Add(this.textBox8);
+            this.eventGroupBox.Location = new System.Drawing.Point(561, 275);
+            this.eventGroupBox.Name = "eventGroupBox";
+            this.eventGroupBox.Size = new System.Drawing.Size(507, 275);
+            this.eventGroupBox.TabIndex = 2;
+            this.eventGroupBox.TabStop = false;
+            this.eventGroupBox.Text = "Event Statistics";
+            // 
+            // schoolGroupBox
+            // 
+            this.schoolGroupBox.Controls.Add(this.label10);
+            this.schoolGroupBox.Controls.Add(this.textBox10);
+            this.schoolGroupBox.Controls.Add(this.label13);
+            this.schoolGroupBox.Controls.Add(this.textBox13);
+            this.schoolGroupBox.Controls.Add(this.label16);
+            this.schoolGroupBox.Controls.Add(this.textBox16);
+            this.schoolGroupBox.Controls.Add(this.label14);
+            this.schoolGroupBox.Controls.Add(this.textBox14);
+            this.schoolGroupBox.Location = new System.Drawing.Point(555, 77);
+            this.schoolGroupBox.Name = "schoolGroupBox";
+            this.schoolGroupBox.Size = new System.Drawing.Size(501, 180);
+            this.schoolGroupBox.TabIndex = 2;
+            this.schoolGroupBox.TabStop = false;
+            this.schoolGroupBox.Text = "School Statictics";
+            // 
+            // clubGroupBox
+            // 
+            this.clubGroupBox.Controls.Add(this.label9);
+            this.clubGroupBox.Controls.Add(this.textBox9);
+            this.clubGroupBox.Controls.Add(this.label12);
+            this.clubGroupBox.Controls.Add(this.textBox12);
+            this.clubGroupBox.Controls.Add(this.label17);
+            this.clubGroupBox.Controls.Add(this.textBox17);
+            this.clubGroupBox.Controls.Add(this.label15);
+            this.clubGroupBox.Controls.Add(this.textBox15);
+            this.clubGroupBox.Location = new System.Drawing.Point(6, 77);
+            this.clubGroupBox.Name = "clubGroupBox";
+            this.clubGroupBox.Size = new System.Drawing.Size(543, 180);
+            this.clubGroupBox.TabIndex = 2;
+            this.clubGroupBox.TabStop = false;
+            this.clubGroupBox.Text = "Club Statistics";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(125, 104);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(100, 20);
+            this.textBox16.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(17, 107);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Smallest school";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(140, 101);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(18, 104);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Smallest club";
             // 
             // MainForm
             // 
@@ -653,6 +1054,17 @@
             this.programsTabPage.PerformLayout();
             this.eventsTabPage.ResumeLayout(false);
             this.eventsTabPage.PerformLayout();
+            this.reportsTabPage.ResumeLayout(false);
+            this.organisationGroupBox.ResumeLayout(false);
+            this.organisationGroupBox.PerformLayout();
+            this.programGroupBox.ResumeLayout(false);
+            this.programGroupBox.PerformLayout();
+            this.eventGroupBox.ResumeLayout(false);
+            this.eventGroupBox.PerformLayout();
+            this.schoolGroupBox.ResumeLayout(false);
+            this.schoolGroupBox.PerformLayout();
+            this.clubGroupBox.ResumeLayout(false);
+            this.clubGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -716,6 +1128,45 @@
         private CMSportsControls.EventListView organisationEventListView;
         private CMSportsControls.EventListView programEventListView;
         private System.Windows.Forms.TabPage reportsTabPage;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox averageNumberOfEventsPerOrgTextBox;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox numberOfOrgsTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox programGroupBox;
+        private System.Windows.Forms.GroupBox organisationGroupBox;
+        private System.Windows.Forms.GroupBox schoolGroupBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.GroupBox clubGroupBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox averageOrgSizeTextBox;
+        private System.Windows.Forms.GroupBox eventGroupBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox17;
     }
 }
 
