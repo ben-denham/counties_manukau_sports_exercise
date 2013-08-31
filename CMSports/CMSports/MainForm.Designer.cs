@@ -55,7 +55,7 @@
             this.programListView = new System.Windows.Forms.ListView();
             this.programNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.programDescriptionColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.eventTabPage = new System.Windows.Forms.TabPage();
+            this.eventsTabPage = new System.Windows.Forms.TabPage();
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.eventDescriptionLabel = new System.Windows.Forms.Label();
             this.eventNewButton = new System.Windows.Forms.Button();
@@ -84,17 +84,19 @@
             this.programContacts = new CMSportsControls.ContactsControl();
             this.eventContacts = new CMSportsControls.ContactsControl();
             this.eventAddressControl = new CMSportsControls.AddressControl();
+            this.reportsTabPage = new System.Windows.Forms.TabPage();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
             this.programsTabPage.SuspendLayout();
-            this.eventTabPage.SuspendLayout();
+            this.eventsTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTabControl
             // 
             this.mainTabControl.Controls.Add(this.organisationsTabPage);
             this.mainTabControl.Controls.Add(this.programsTabPage);
-            this.mainTabControl.Controls.Add(this.eventTabPage);
+            this.mainTabControl.Controls.Add(this.eventsTabPage);
+            this.mainTabControl.Controls.Add(this.reportsTabPage);
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
             this.mainTabControl.Name = "mainTabControl";
@@ -360,35 +362,35 @@
             this.programDescriptionColumnHeader.Text = "Description";
             this.programDescriptionColumnHeader.Width = 235;
             // 
-            // eventTabPage
+            // eventsTabPage
             // 
-            this.eventTabPage.Controls.Add(this.eventDescriptionTextBox);
-            this.eventTabPage.Controls.Add(this.eventDescriptionLabel);
-            this.eventTabPage.Controls.Add(this.eventNewButton);
-            this.eventTabPage.Controls.Add(this.eventDeleteButton);
-            this.eventTabPage.Controls.Add(this.eventSaveButton);
-            this.eventTabPage.Controls.Add(this.eventEndDateTimePicker);
-            this.eventTabPage.Controls.Add(this.eventEndLabel);
-            this.eventTabPage.Controls.Add(this.eventProgramComboBox);
-            this.eventTabPage.Controls.Add(this.eventOrganisationComboBox);
-            this.eventTabPage.Controls.Add(this.eventProgramLabel);
-            this.eventTabPage.Controls.Add(this.eventOrganisationLabel);
-            this.eventTabPage.Controls.Add(this.eventStartDateTimePicker);
-            this.eventTabPage.Controls.Add(this.eventStartLabel);
-            this.eventTabPage.Controls.Add(this.eventCapacityTextBox);
-            this.eventTabPage.Controls.Add(this.eventCapacityLabel);
-            this.eventTabPage.Controls.Add(this.eventNameTextBox);
-            this.eventTabPage.Controls.Add(this.eventNameLabel);
-            this.eventTabPage.Controls.Add(this.eventContacts);
-            this.eventTabPage.Controls.Add(this.eventAddressControl);
-            this.eventTabPage.Controls.Add(this.eventListView);
-            this.eventTabPage.Location = new System.Drawing.Point(4, 22);
-            this.eventTabPage.Name = "eventTabPage";
-            this.eventTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.eventTabPage.Size = new System.Drawing.Size(1076, 556);
-            this.eventTabPage.TabIndex = 2;
-            this.eventTabPage.Text = "Events";
-            this.eventTabPage.UseVisualStyleBackColor = true;
+            this.eventsTabPage.Controls.Add(this.eventDescriptionTextBox);
+            this.eventsTabPage.Controls.Add(this.eventDescriptionLabel);
+            this.eventsTabPage.Controls.Add(this.eventNewButton);
+            this.eventsTabPage.Controls.Add(this.eventDeleteButton);
+            this.eventsTabPage.Controls.Add(this.eventSaveButton);
+            this.eventsTabPage.Controls.Add(this.eventEndDateTimePicker);
+            this.eventsTabPage.Controls.Add(this.eventEndLabel);
+            this.eventsTabPage.Controls.Add(this.eventProgramComboBox);
+            this.eventsTabPage.Controls.Add(this.eventOrganisationComboBox);
+            this.eventsTabPage.Controls.Add(this.eventProgramLabel);
+            this.eventsTabPage.Controls.Add(this.eventOrganisationLabel);
+            this.eventsTabPage.Controls.Add(this.eventStartDateTimePicker);
+            this.eventsTabPage.Controls.Add(this.eventStartLabel);
+            this.eventsTabPage.Controls.Add(this.eventCapacityTextBox);
+            this.eventsTabPage.Controls.Add(this.eventCapacityLabel);
+            this.eventsTabPage.Controls.Add(this.eventNameTextBox);
+            this.eventsTabPage.Controls.Add(this.eventNameLabel);
+            this.eventsTabPage.Controls.Add(this.eventContacts);
+            this.eventsTabPage.Controls.Add(this.eventAddressControl);
+            this.eventsTabPage.Controls.Add(this.eventListView);
+            this.eventsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.eventsTabPage.Name = "eventsTabPage";
+            this.eventsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.eventsTabPage.Size = new System.Drawing.Size(1076, 556);
+            this.eventsTabPage.TabIndex = 2;
+            this.eventsTabPage.Text = "Events";
+            this.eventsTabPage.UseVisualStyleBackColor = true;
             // 
             // eventDescriptionTextBox
             // 
@@ -624,6 +626,16 @@
             this.eventAddressControl.Size = new System.Drawing.Size(333, 136);
             this.eventAddressControl.TabIndex = 13;
             // 
+            // reportsTabPage
+            // 
+            this.reportsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.reportsTabPage.Name = "reportsTabPage";
+            this.reportsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.reportsTabPage.Size = new System.Drawing.Size(1076, 556);
+            this.reportsTabPage.TabIndex = 3;
+            this.reportsTabPage.Text = "Reports";
+            this.reportsTabPage.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -639,8 +651,8 @@
             this.organisationsTabPage.PerformLayout();
             this.programsTabPage.ResumeLayout(false);
             this.programsTabPage.PerformLayout();
-            this.eventTabPage.ResumeLayout(false);
-            this.eventTabPage.PerformLayout();
+            this.eventsTabPage.ResumeLayout(false);
+            this.eventsTabPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -677,7 +689,7 @@
         private System.Windows.Forms.Button programDeleteButton;
         private System.Windows.Forms.Button programSaveButton;
         private System.Windows.Forms.Button programNewButton;
-        private System.Windows.Forms.TabPage eventTabPage;
+        private System.Windows.Forms.TabPage eventsTabPage;
         private System.Windows.Forms.ListView eventListView;
         private System.Windows.Forms.ColumnHeader eventNameColumnHeader;
         private System.Windows.Forms.ColumnHeader eventOrganisationColumnHeader;
@@ -703,6 +715,7 @@
         private System.Windows.Forms.Label eventDescriptionLabel;
         private CMSportsControls.EventListView organisationEventListView;
         private CMSportsControls.EventListView programEventListView;
+        private System.Windows.Forms.TabPage reportsTabPage;
     }
 }
 

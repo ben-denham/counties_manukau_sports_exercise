@@ -88,6 +88,9 @@ namespace CMSports
                         populateEventFields(activeEvent);
                     }
                     break;
+                case 3:
+                    
+                    break;
                     
             }
         }
