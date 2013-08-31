@@ -123,7 +123,15 @@ namespace CMSportsObjects
             }
             set
             {
+                if (Organisation != null)
+                {
+                    organisation.Events.Remove(this);
+                }
                 organisation = value;
+                if (organisation.Events.IndexOf(this) == -1)
+                {
+                    organisation.Events.Add(this);
+                }
             }
         }
 
@@ -135,8 +143,22 @@ namespace CMSportsObjects
             }
             set
             {
+                if (Program != null)
+                {
+                    program.Events.Remove(this);
+                }
                 program = value;
+                if (program.Events.IndexOf(this) == -1)
+                {
+                    program.Events.Add(this);
+                }
             }
+        }
+
+        public void Dispose()
+        {
+            Organisation.Events.Remove(this);
+            program.Events.Remove(this);
         }
     }
 }

@@ -38,8 +38,6 @@
             this.sizeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.newClubButton = new System.Windows.Forms.Button();
             this.newSchoolButton = new System.Windows.Forms.Button();
-            this.organisationEventsGroupBox = new System.Windows.Forms.GroupBox();
-            this.organisationEventsListView = new System.Windows.Forms.ListView();
             this.organisationDeleteButton = new System.Windows.Forms.Button();
             this.organisationSaveButton = new System.Windows.Forms.Button();
             this.organisationSizeTextBox = new System.Windows.Forms.TextBox();
@@ -50,8 +48,6 @@
             this.programNewButton = new System.Windows.Forms.Button();
             this.programDeleteButton = new System.Windows.Forms.Button();
             this.programSaveButton = new System.Windows.Forms.Button();
-            this.programEventsGroupBox = new System.Windows.Forms.GroupBox();
-            this.programEventsListView = new System.Windows.Forms.ListView();
             this.programDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.programDescriptionLabel = new System.Windows.Forms.Label();
             this.programNameTextBox = new System.Windows.Forms.TextBox();
@@ -60,6 +56,8 @@
             this.programNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.programDescriptionColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventTabPage = new System.Windows.Forms.TabPage();
+            this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.eventDescriptionLabel = new System.Windows.Forms.Label();
             this.eventNewButton = new System.Windows.Forms.Button();
             this.eventDeleteButton = new System.Windows.Forms.Button();
             this.eventSaveButton = new System.Windows.Forms.Button();
@@ -79,18 +77,16 @@
             this.eventNameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventOrganisationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventProgramColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.eventDescriptionLabel = new System.Windows.Forms.Label();
+            this.organisationEventListView = new CMSportsControls.EventListView();
             this.organisationContacts = new CMSportsControls.ContactsControl();
             this.organisationAddressAddressControl = new CMSportsControls.AddressControl();
+            this.programEventListView = new CMSportsControls.EventListView();
             this.programContacts = new CMSportsControls.ContactsControl();
             this.eventContacts = new CMSportsControls.ContactsControl();
             this.eventAddressControl = new CMSportsControls.AddressControl();
             this.mainTabControl.SuspendLayout();
             this.organisationsTabPage.SuspendLayout();
-            this.organisationEventsGroupBox.SuspendLayout();
             this.programsTabPage.SuspendLayout();
-            this.programEventsGroupBox.SuspendLayout();
             this.eventTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,13 +105,13 @@
             // 
             // organisationsTabPage
             // 
+            this.organisationsTabPage.Controls.Add(this.organisationEventListView);
             this.organisationsTabPage.Controls.Add(this.organisationTypeTextBox);
             this.organisationsTabPage.Controls.Add(this.organisationTypeLabel);
             this.organisationsTabPage.Controls.Add(this.organisationListView);
             this.organisationsTabPage.Controls.Add(this.newClubButton);
             this.organisationsTabPage.Controls.Add(this.newSchoolButton);
             this.organisationsTabPage.Controls.Add(this.organisationContacts);
-            this.organisationsTabPage.Controls.Add(this.organisationEventsGroupBox);
             this.organisationsTabPage.Controls.Add(this.organisationDeleteButton);
             this.organisationsTabPage.Controls.Add(this.organisationSaveButton);
             this.organisationsTabPage.Controls.Add(this.organisationSizeTextBox);
@@ -200,25 +196,6 @@
             this.newSchoolButton.UseVisualStyleBackColor = true;
             this.newSchoolButton.Click += new System.EventHandler(this.newSchoolButton_Click);
             // 
-            // organisationEventsGroupBox
-            // 
-            this.organisationEventsGroupBox.Controls.Add(this.organisationEventsListView);
-            this.organisationEventsGroupBox.Location = new System.Drawing.Point(398, 388);
-            this.organisationEventsGroupBox.Name = "organisationEventsGroupBox";
-            this.organisationEventsGroupBox.Size = new System.Drawing.Size(672, 162);
-            this.organisationEventsGroupBox.TabIndex = 7;
-            this.organisationEventsGroupBox.TabStop = false;
-            this.organisationEventsGroupBox.Text = "&Events";
-            // 
-            // organisationEventsListView
-            // 
-            this.organisationEventsListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.organisationEventsListView.Location = new System.Drawing.Point(3, 16);
-            this.organisationEventsListView.Name = "organisationEventsListView";
-            this.organisationEventsListView.Size = new System.Drawing.Size(666, 143);
-            this.organisationEventsListView.TabIndex = 0;
-            this.organisationEventsListView.UseCompatibleStateImageBehavior = false;
-            // 
             // organisationDeleteButton
             // 
             this.organisationDeleteButton.Enabled = false;
@@ -275,10 +252,10 @@
             // 
             // programsTabPage
             // 
+            this.programsTabPage.Controls.Add(this.programEventListView);
             this.programsTabPage.Controls.Add(this.programNewButton);
             this.programsTabPage.Controls.Add(this.programDeleteButton);
             this.programsTabPage.Controls.Add(this.programSaveButton);
-            this.programsTabPage.Controls.Add(this.programEventsGroupBox);
             this.programsTabPage.Controls.Add(this.programDescriptionTextBox);
             this.programsTabPage.Controls.Add(this.programDescriptionLabel);
             this.programsTabPage.Controls.Add(this.programNameTextBox);
@@ -324,25 +301,6 @@
             this.programSaveButton.Text = "&Save Program";
             this.programSaveButton.UseVisualStyleBackColor = true;
             this.programSaveButton.Click += new System.EventHandler(this.programSaveButton_Click);
-            // 
-            // programEventsGroupBox
-            // 
-            this.programEventsGroupBox.Controls.Add(this.programEventsListView);
-            this.programEventsGroupBox.Location = new System.Drawing.Point(398, 388);
-            this.programEventsGroupBox.Name = "programEventsGroupBox";
-            this.programEventsGroupBox.Size = new System.Drawing.Size(672, 162);
-            this.programEventsGroupBox.TabIndex = 6;
-            this.programEventsGroupBox.TabStop = false;
-            this.programEventsGroupBox.Text = "&Events";
-            // 
-            // programEventsListView
-            // 
-            this.programEventsListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.programEventsListView.Location = new System.Drawing.Point(3, 16);
-            this.programEventsListView.Name = "programEventsListView";
-            this.programEventsListView.Size = new System.Drawing.Size(666, 143);
-            this.programEventsListView.TabIndex = 0;
-            this.programEventsListView.UseCompatibleStateImageBehavior = false;
             // 
             // programDescriptionTextBox
             // 
@@ -419,9 +377,9 @@
             this.eventTabPage.Controls.Add(this.eventStartLabel);
             this.eventTabPage.Controls.Add(this.eventCapacityTextBox);
             this.eventTabPage.Controls.Add(this.eventCapacityLabel);
-            this.eventTabPage.Controls.Add(this.eventContacts);
             this.eventTabPage.Controls.Add(this.eventNameTextBox);
             this.eventTabPage.Controls.Add(this.eventNameLabel);
+            this.eventTabPage.Controls.Add(this.eventContacts);
             this.eventTabPage.Controls.Add(this.eventAddressControl);
             this.eventTabPage.Controls.Add(this.eventListView);
             this.eventTabPage.Location = new System.Drawing.Point(4, 22);
@@ -432,6 +390,23 @@
             this.eventTabPage.Text = "Events";
             this.eventTabPage.UseVisualStyleBackColor = true;
             // 
+            // eventDescriptionTextBox
+            // 
+            this.eventDescriptionTextBox.Location = new System.Drawing.Point(401, 183);
+            this.eventDescriptionTextBox.Multiline = true;
+            this.eventDescriptionTextBox.Name = "eventDescriptionTextBox";
+            this.eventDescriptionTextBox.Size = new System.Drawing.Size(667, 96);
+            this.eventDescriptionTextBox.TabIndex = 19;
+            // 
+            // eventDescriptionLabel
+            // 
+            this.eventDescriptionLabel.AutoSize = true;
+            this.eventDescriptionLabel.Location = new System.Drawing.Point(398, 167);
+            this.eventDescriptionLabel.Name = "eventDescriptionLabel";
+            this.eventDescriptionLabel.Size = new System.Drawing.Size(91, 13);
+            this.eventDescriptionLabel.TabIndex = 18;
+            this.eventDescriptionLabel.Text = "Event D&escription";
+            // 
             // eventNewButton
             // 
             this.eventNewButton.Location = new System.Drawing.Point(979, 525);
@@ -440,6 +415,7 @@
             this.eventNewButton.TabIndex = 17;
             this.eventNewButton.Text = "&New Event";
             this.eventNewButton.UseVisualStyleBackColor = true;
+            this.eventNewButton.Click += new System.EventHandler(this.eventNewButton_Click);
             // 
             // eventDeleteButton
             // 
@@ -450,6 +426,7 @@
             this.eventDeleteButton.TabIndex = 16;
             this.eventDeleteButton.Text = "&Delete Event";
             this.eventDeleteButton.UseVisualStyleBackColor = false;
+            this.eventDeleteButton.Click += new System.EventHandler(this.eventDeleteButton_Click);
             // 
             // eventSaveButton
             // 
@@ -460,6 +437,7 @@
             this.eventSaveButton.TabIndex = 15;
             this.eventSaveButton.Text = "&Save Event";
             this.eventSaveButton.UseVisualStyleBackColor = true;
+            this.eventSaveButton.Click += new System.EventHandler(this.eventSaveButton_Click);
             // 
             // eventEndDateTimePicker
             // 
@@ -482,7 +460,7 @@
             // 
             // eventProgramComboBox
             // 
-            this.eventProgramComboBox.DisplayMember = "ToString()";
+            this.eventProgramComboBox.DisplayMember = "Name";
             this.eventProgramComboBox.FormattingEnabled = true;
             this.eventProgramComboBox.Location = new System.Drawing.Point(498, 143);
             this.eventProgramComboBox.Name = "eventProgramComboBox";
@@ -491,7 +469,7 @@
             // 
             // eventOrganisationComboBox
             // 
-            this.eventOrganisationComboBox.DisplayMember = "ToString()";
+            this.eventOrganisationComboBox.DisplayMember = "Name";
             this.eventOrganisationComboBox.FormattingEnabled = true;
             this.eventOrganisationComboBox.Location = new System.Drawing.Point(498, 116);
             this.eventOrganisationComboBox.Name = "eventOrganisationComboBox";
@@ -597,22 +575,12 @@
             this.eventProgramColumnHeader.Text = "Program";
             this.eventProgramColumnHeader.Width = 130;
             // 
-            // eventDescriptionTextBox
+            // organisationEventListView
             // 
-            this.eventDescriptionTextBox.Location = new System.Drawing.Point(401, 183);
-            this.eventDescriptionTextBox.Multiline = true;
-            this.eventDescriptionTextBox.Name = "eventDescriptionTextBox";
-            this.eventDescriptionTextBox.Size = new System.Drawing.Size(667, 96);
-            this.eventDescriptionTextBox.TabIndex = 19;
-            // 
-            // eventDescriptionLabel
-            // 
-            this.eventDescriptionLabel.AutoSize = true;
-            this.eventDescriptionLabel.Location = new System.Drawing.Point(398, 167);
-            this.eventDescriptionLabel.Name = "eventDescriptionLabel";
-            this.eventDescriptionLabel.Size = new System.Drawing.Size(91, 13);
-            this.eventDescriptionLabel.TabIndex = 18;
-            this.eventDescriptionLabel.Text = "Event D&escription";
+            this.organisationEventListView.Location = new System.Drawing.Point(398, 388);
+            this.organisationEventListView.Name = "organisationEventListView";
+            this.organisationEventListView.Size = new System.Drawing.Size(672, 162);
+            this.organisationEventListView.TabIndex = 15;
             // 
             // organisationContacts
             // 
@@ -627,6 +595,13 @@
             this.organisationAddressAddressControl.Name = "organisationAddressAddressControl";
             this.organisationAddressAddressControl.Size = new System.Drawing.Size(333, 136);
             this.organisationAddressAddressControl.TabIndex = 5;
+            // 
+            // programEventListView
+            // 
+            this.programEventListView.Location = new System.Drawing.Point(398, 388);
+            this.programEventListView.Name = "programEventListView";
+            this.programEventListView.Size = new System.Drawing.Size(672, 162);
+            this.programEventListView.TabIndex = 10;
             // 
             // programContacts
             // 
@@ -662,10 +637,8 @@
             this.mainTabControl.ResumeLayout(false);
             this.organisationsTabPage.ResumeLayout(false);
             this.organisationsTabPage.PerformLayout();
-            this.organisationEventsGroupBox.ResumeLayout(false);
             this.programsTabPage.ResumeLayout(false);
             this.programsTabPage.PerformLayout();
-            this.programEventsGroupBox.ResumeLayout(false);
             this.eventTabPage.ResumeLayout(false);
             this.eventTabPage.PerformLayout();
             this.ResumeLayout(false);
@@ -682,9 +655,7 @@
         private System.Windows.Forms.TextBox organisationSizeTextBox;
         private System.Windows.Forms.Label organisationSizeLabel;
         private System.Windows.Forms.Button organisationSaveButton;
-        private System.Windows.Forms.ListView organisationEventsListView;
         private System.Windows.Forms.Button organisationDeleteButton;
-        private System.Windows.Forms.GroupBox organisationEventsGroupBox;
         private CMSportsControls.ContactsControl organisationContacts;
         private System.Windows.Forms.Button newClubButton;
         private System.Windows.Forms.Button newSchoolButton;
@@ -703,8 +674,6 @@
         private System.Windows.Forms.TextBox programDescriptionTextBox;
         private System.Windows.Forms.Label programDescriptionLabel;
         private System.Windows.Forms.TextBox programNameTextBox;
-        private System.Windows.Forms.GroupBox programEventsGroupBox;
-        private System.Windows.Forms.ListView programEventsListView;
         private System.Windows.Forms.Button programDeleteButton;
         private System.Windows.Forms.Button programSaveButton;
         private System.Windows.Forms.Button programNewButton;
@@ -732,6 +701,8 @@
         private System.Windows.Forms.ComboBox eventOrganisationComboBox;
         private System.Windows.Forms.TextBox eventDescriptionTextBox;
         private System.Windows.Forms.Label eventDescriptionLabel;
+        private CMSportsControls.EventListView organisationEventListView;
+        private CMSportsControls.EventListView programEventListView;
     }
 }
 

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace CMSportsObjects
 {
-    public class Programme
+    public class Programme : INotifyPropertyChanged
     {
         private string name;
         private string description;
@@ -35,6 +37,7 @@ namespace CMSportsObjects
             set
             {
                 name = value;
+                NotifyPropertyChanged();
             }
         }
 
@@ -69,6 +72,24 @@ namespace CMSportsObjects
         public override string ToString()
         {
             return Name;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public void Dispose()
+        {
+            foreach (Event cmsEvent in Events)
+            {
+                cmsEvent.Program = null;
+            }
         }
     }
 }

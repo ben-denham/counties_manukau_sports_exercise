@@ -59,6 +59,12 @@
     <Compile Include="ContactsControl.Designer.cs">
       <DependentUpon>ContactsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventListView.Designer.cs">
+      <DependentUpon>EventListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContactsControl.resx">
       <DependentUpon>ContactsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventListView.resx">
+      <DependentUpon>EventListView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
