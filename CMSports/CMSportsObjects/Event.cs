@@ -125,12 +125,12 @@ namespace CMSportsObjects
             {
                 if (Organisation != null)
                 {
-                    organisation.Events.Remove(this);
+                    Organisation.Events.Remove(this);
                 }
                 organisation = value;
-                if (organisation.Events.IndexOf(this) == -1)
+                if (Organisation != null && organisation.Events.IndexOf(this) == -1)
                 {
-                    organisation.Events.Add(this);
+                    Organisation.Events.Add(this);
                 }
             }
         }
@@ -145,20 +145,26 @@ namespace CMSportsObjects
             {
                 if (Program != null)
                 {
-                    program.Events.Remove(this);
+                    Program.Events.Remove(this);
                 }
                 program = value;
-                if (program.Events.IndexOf(this) == -1)
+                if (Program != null && program.Events.IndexOf(this) == -1)
                 {
-                    program.Events.Add(this);
+                    Program.Events.Add(this);
                 }
             }
         }
 
         public void Dispose()
         {
-            Organisation.Events.Remove(this);
-            program.Events.Remove(this);
+            if (Organisation != null)
+            {
+                Organisation.Events.Remove(this);
+            }
+            if (Program != null)
+            {
+                Program.Events.Remove(this);
+            }
         }
     }
 }
