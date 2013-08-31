@@ -409,6 +409,8 @@ namespace CMSports
         private void refreshReports()
         {
             calculateOrganisationStatistics();
+            calculateClubStatistics();
+            calculateSchoolStatistics();
         }
 
         private void calculateOrganisationStatistics()
@@ -429,5 +431,44 @@ namespace CMSports
             averageNumberOfEventsPerOrgTextBox.Text = averageEvents.ToString();
         }
 
+        private void calculateClubStatistics()
+        {
+            int totalClubs = 0;
+            int totalSize = 0;
+            int largestClub = 0;
+            int smallestClub = 0;
+            foreach (Organisation organisation in organisations)
+            {
+                if (organisation.Type == "Club")
+                {
+                    totalClubs++;
+                    totalSize += organisation.Size;
+                    if (organisation.Size > largestClub)
+                    {
+                        largestClub = organisation.Size;
+                    }
+                    if (organisation.Size < smallestClub || smallestClub == 0)
+                    {
+                        smallestClub = organisation.Size;
+                    }
+                }
+            }
+            int averageSize = totalSize / totalClubs;
+            numberOfClubsTextBox.Text = totalClubs.ToString();
+            averageClubSizeTextBox.Text = averageSize.ToString();
+            largestClubTextBox.Text = largestClub.ToString();
+            smallestClubTextBox.Text = smallestClub.ToString();
+        }
+
+        private void calculateSchoolStatistics()
+        {
+            foreach (Organisation organisation in organisations)
+            {
+                if (organisation.Type == "School")
+                {
+
+                }
+            }
+        }
     }
 }
