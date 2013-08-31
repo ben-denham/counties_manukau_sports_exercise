@@ -88,31 +88,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numberOfOrgsTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.numberOfProgramsTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.numberOfEventsTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.averageNumberOfEventsPerOrgTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.averageNumberOfEventsPerProgramTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.averageLengthOfEventsTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.longestEventTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.shortestEventTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.numberOfClubsTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.numberOfSchoolsTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.averageOrgSizeTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.averageClubSizeTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.averageSchoolSizeTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.largestSchoolTextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.largestClubTextBox = new System.Windows.Forms.TextBox();
             this.organisationGroupBox = new System.Windows.Forms.GroupBox();
@@ -120,7 +120,7 @@
             this.eventGroupBox = new System.Windows.Forms.GroupBox();
             this.schoolGroupBox = new System.Windows.Forms.GroupBox();
             this.clubGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.smallestSchoolTextBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.smallestClubTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -710,13 +710,13 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Number of programs";
             // 
-            // textBox2
+            // numberOfProgramsTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.numberOfProgramsTextBox.Location = new System.Drawing.Point(112, 19);
+            this.numberOfProgramsTextBox.Name = "numberOfProgramsTextBox";
+            this.numberOfProgramsTextBox.ReadOnly = true;
+            this.numberOfProgramsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numberOfProgramsTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -727,13 +727,13 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Number of events";
             // 
-            // textBox3
+            // numberOfEventsTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 23);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 1;
+            this.numberOfEventsTextBox.Location = new System.Drawing.Point(123, 23);
+            this.numberOfEventsTextBox.Name = "numberOfEventsTextBox";
+            this.numberOfEventsTextBox.ReadOnly = true;
+            this.numberOfEventsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numberOfEventsTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -761,13 +761,13 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Average number of events per program";
             // 
-            // textBox5
+            // averageNumberOfEventsPerProgramTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(222, 44);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 1;
+            this.averageNumberOfEventsPerProgramTextBox.Location = new System.Drawing.Point(222, 44);
+            this.averageNumberOfEventsPerProgramTextBox.Name = "averageNumberOfEventsPerProgramTextBox";
+            this.averageNumberOfEventsPerProgramTextBox.ReadOnly = true;
+            this.averageNumberOfEventsPerProgramTextBox.Size = new System.Drawing.Size(100, 20);
+            this.averageNumberOfEventsPerProgramTextBox.TabIndex = 1;
             // 
             // label6
             // 
@@ -778,13 +778,13 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Average length of events";
             // 
-            // textBox6
+            // averageLengthOfEventsTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(149, 49);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 1;
+            this.averageLengthOfEventsTextBox.Location = new System.Drawing.Point(149, 49);
+            this.averageLengthOfEventsTextBox.Name = "averageLengthOfEventsTextBox";
+            this.averageLengthOfEventsTextBox.ReadOnly = true;
+            this.averageLengthOfEventsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.averageLengthOfEventsTextBox.TabIndex = 1;
             // 
             // label7
             // 
@@ -795,13 +795,13 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Longest event";
             // 
-            // textBox7
+            // longestEventTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(123, 77);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 1;
+            this.longestEventTextBox.Location = new System.Drawing.Point(123, 77);
+            this.longestEventTextBox.Name = "longestEventTextBox";
+            this.longestEventTextBox.ReadOnly = true;
+            this.longestEventTextBox.Size = new System.Drawing.Size(100, 20);
+            this.longestEventTextBox.TabIndex = 1;
             // 
             // label8
             // 
@@ -812,13 +812,13 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Shortest event";
             // 
-            // textBox8
+            // shortestEventTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(123, 101);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 1;
+            this.shortestEventTextBox.Location = new System.Drawing.Point(123, 101);
+            this.shortestEventTextBox.Name = "shortestEventTextBox";
+            this.shortestEventTextBox.ReadOnly = true;
+            this.shortestEventTextBox.Size = new System.Drawing.Size(100, 20);
+            this.shortestEventTextBox.TabIndex = 1;
             // 
             // label9
             // 
@@ -846,13 +846,13 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Number of schools";
             // 
-            // textBox10
+            // numberOfSchoolsTextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(123, 27);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 1;
+            this.numberOfSchoolsTextBox.Location = new System.Drawing.Point(123, 27);
+            this.numberOfSchoolsTextBox.Name = "numberOfSchoolsTextBox";
+            this.numberOfSchoolsTextBox.ReadOnly = true;
+            this.numberOfSchoolsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.numberOfSchoolsTextBox.TabIndex = 1;
             // 
             // label11
             // 
@@ -897,13 +897,13 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Average school size";
             // 
-            // textBox13
+            // averageSchoolSizeTextBox
             // 
-            this.textBox13.Location = new System.Drawing.Point(125, 53);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 1;
+            this.averageSchoolSizeTextBox.Location = new System.Drawing.Point(125, 53);
+            this.averageSchoolSizeTextBox.Name = "averageSchoolSizeTextBox";
+            this.averageSchoolSizeTextBox.ReadOnly = true;
+            this.averageSchoolSizeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.averageSchoolSizeTextBox.TabIndex = 1;
             // 
             // label14
             // 
@@ -914,13 +914,13 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Largest school";
             // 
-            // textBox14
+            // largestSchoolTextBox
             // 
-            this.textBox14.Location = new System.Drawing.Point(125, 79);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 1;
+            this.largestSchoolTextBox.Location = new System.Drawing.Point(125, 79);
+            this.largestSchoolTextBox.Name = "largestSchoolTextBox";
+            this.largestSchoolTextBox.ReadOnly = true;
+            this.largestSchoolTextBox.Size = new System.Drawing.Size(100, 20);
+            this.largestSchoolTextBox.TabIndex = 1;
             // 
             // label15
             // 
@@ -959,9 +959,9 @@
             // programGroupBox
             // 
             this.programGroupBox.Controls.Add(this.label2);
-            this.programGroupBox.Controls.Add(this.textBox2);
+            this.programGroupBox.Controls.Add(this.numberOfProgramsTextBox);
             this.programGroupBox.Controls.Add(this.label5);
-            this.programGroupBox.Controls.Add(this.textBox5);
+            this.programGroupBox.Controls.Add(this.averageNumberOfEventsPerProgramTextBox);
             this.programGroupBox.Location = new System.Drawing.Point(6, 275);
             this.programGroupBox.Name = "programGroupBox";
             this.programGroupBox.Size = new System.Drawing.Size(549, 275);
@@ -972,13 +972,13 @@
             // eventGroupBox
             // 
             this.eventGroupBox.Controls.Add(this.label3);
-            this.eventGroupBox.Controls.Add(this.textBox3);
+            this.eventGroupBox.Controls.Add(this.numberOfEventsTextBox);
             this.eventGroupBox.Controls.Add(this.label6);
-            this.eventGroupBox.Controls.Add(this.textBox6);
+            this.eventGroupBox.Controls.Add(this.averageLengthOfEventsTextBox);
             this.eventGroupBox.Controls.Add(this.label7);
             this.eventGroupBox.Controls.Add(this.label8);
-            this.eventGroupBox.Controls.Add(this.textBox7);
-            this.eventGroupBox.Controls.Add(this.textBox8);
+            this.eventGroupBox.Controls.Add(this.longestEventTextBox);
+            this.eventGroupBox.Controls.Add(this.shortestEventTextBox);
             this.eventGroupBox.Location = new System.Drawing.Point(561, 275);
             this.eventGroupBox.Name = "eventGroupBox";
             this.eventGroupBox.Size = new System.Drawing.Size(507, 275);
@@ -989,13 +989,13 @@
             // schoolGroupBox
             // 
             this.schoolGroupBox.Controls.Add(this.label10);
-            this.schoolGroupBox.Controls.Add(this.textBox10);
+            this.schoolGroupBox.Controls.Add(this.numberOfSchoolsTextBox);
             this.schoolGroupBox.Controls.Add(this.label13);
-            this.schoolGroupBox.Controls.Add(this.textBox13);
+            this.schoolGroupBox.Controls.Add(this.averageSchoolSizeTextBox);
             this.schoolGroupBox.Controls.Add(this.label16);
-            this.schoolGroupBox.Controls.Add(this.textBox16);
+            this.schoolGroupBox.Controls.Add(this.smallestSchoolTextBox);
             this.schoolGroupBox.Controls.Add(this.label14);
-            this.schoolGroupBox.Controls.Add(this.textBox14);
+            this.schoolGroupBox.Controls.Add(this.largestSchoolTextBox);
             this.schoolGroupBox.Location = new System.Drawing.Point(555, 77);
             this.schoolGroupBox.Name = "schoolGroupBox";
             this.schoolGroupBox.Size = new System.Drawing.Size(501, 180);
@@ -1020,13 +1020,13 @@
             this.clubGroupBox.TabStop = false;
             this.clubGroupBox.Text = "Club Statistics";
             // 
-            // textBox16
+            // smallestSchoolTextBox
             // 
-            this.textBox16.Location = new System.Drawing.Point(125, 104);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 1;
+            this.smallestSchoolTextBox.Location = new System.Drawing.Point(125, 104);
+            this.smallestSchoolTextBox.Name = "smallestSchoolTextBox";
+            this.smallestSchoolTextBox.ReadOnly = true;
+            this.smallestSchoolTextBox.Size = new System.Drawing.Size(100, 20);
+            this.smallestSchoolTextBox.TabIndex = 1;
             // 
             // label16
             // 
@@ -1145,12 +1145,12 @@
         private CMSportsControls.EventListView organisationEventListView;
         private CMSportsControls.EventListView programEventListView;
         private System.Windows.Forms.TabPage reportsTabPage;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox longestEventTextBox;
+        private System.Windows.Forms.TextBox averageLengthOfEventsTextBox;
+        private System.Windows.Forms.TextBox averageNumberOfEventsPerProgramTextBox;
         private System.Windows.Forms.TextBox averageNumberOfEventsPerOrgTextBox;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox numberOfEventsTextBox;
+        private System.Windows.Forms.TextBox numberOfProgramsTextBox;
         private System.Windows.Forms.TextBox numberOfOrgsTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -1163,11 +1163,11 @@
         private System.Windows.Forms.GroupBox organisationGroupBox;
         private System.Windows.Forms.GroupBox schoolGroupBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox numberOfSchoolsTextBox;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox averageSchoolSizeTextBox;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox largestSchoolTextBox;
         private System.Windows.Forms.GroupBox clubGroupBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox numberOfClubsTextBox;
@@ -1179,9 +1179,9 @@
         private System.Windows.Forms.TextBox averageOrgSizeTextBox;
         private System.Windows.Forms.GroupBox eventGroupBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox shortestEventTextBox;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox smallestSchoolTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox smallestClubTextBox;
     }

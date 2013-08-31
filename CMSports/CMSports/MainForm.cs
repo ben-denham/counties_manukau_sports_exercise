@@ -411,6 +411,8 @@ namespace CMSports
             calculateOrganisationStatistics();
             calculateClubStatistics();
             calculateSchoolStatistics();
+            calculateProgramStatistics();
+            calculateEventStatistics();
         }
 
         private void calculateOrganisationStatistics()
@@ -462,12 +464,74 @@ namespace CMSports
 
         private void calculateSchoolStatistics()
         {
+            int totalSchools = 0;
+            int totalSize = 0;
+            int largestSchool = 0;
+            int smallestSchool = 0;
             foreach (Organisation organisation in organisations)
             {
                 if (organisation.Type == "School")
                 {
-
+                    totalSchools++;
+                    totalSize += organisation.Size;
+                    if (organisation.Size > largestSchool)
+                    {
+                        largestSchool = organisation.Size;
+                    }
+                    if (organisation.Size < smallestSchool || smallestSchool == 0)
+                    {
+                        smallestSchool = organisation.Size;
+                    }
                 }
+            }
+            int averageSize = totalSize / totalSchools;
+            numberOfSchoolsTextBox.Text = totalSchools.ToString();
+            averageSchoolSizeTextBox.Text = averageSize.ToString();
+            largestSchoolTextBox.Text = largestSchool.ToString();
+            smallestSchoolTextBox.Text = smallestSchool.ToString();
+        }
+
+        private void calculateProgramStatistics()
+        {
+            // Number of Programs
+            numberOfProgramsTextBox.Text = programs.Count().ToString();
+            // Program Averages
+            int totalEvents = 0;
+            foreach (Programme program in programs)
+            {
+                totalEvents += program.Events.Count();
+            }
+            int averageEvents = totalEvents / programs.Count();
+            averageNumberOfEventsPerProgramTextBox.Text = averageEvents.ToString();
+        }
+
+        private void calculateEventStatistics()
+        {
+            // Number of Events
+            numberOfEventsTextBox.Text = events.Count().ToString();
+            // Event Lengths
+            TimeSpan totalTime = new TimeSpan();
+            TimeSpan longestEvent = new TimeSpan();
+            TimeSpan shortestEvent = new TimeSpan();
+            foreach (Event cmsEvent in events)
+            {
+                TimeSpan eventLength = cmsEvent.EndTime - cmsEvent.StartTime;
+                totalTime += eventLength;
+                if (eventLength > longestEvent)
+                {
+                    longestEvent = eventLength;
+                }
+                if (eventLength < shortestEvent || shortestEvent == new TimeSpan())
+                {
+                    shortestEvent = eventLength;
+                }
+            }
+            if (events.Count() > 0)
+            {
+                TimeSpan averageTime = new TimeSpan(totalTime.Ticks / events.Count());
+                averageLengthOfEventsTextBox.Text = averageTime.ToString();
+                longestEventTextBox.Text = longestEvent.ToString();
+                shortestEventTextBox.Text = shortestEvent.ToString();
             }
         }
     }
