@@ -73,14 +73,12 @@ namespace CMSports
                     {
                         populateOrganisationFields(activeOrganisation);
                     }
-                    refreshOrganisationEventsListView();
                     break;
                 case 1:
                     if (activeProgram != null)
                     {
                         populateProgramFields(activeProgram);
                     }
-                    refreshProgramEventsListView();
                     break;
                 case 2:
                     if (activeEvent != null)
