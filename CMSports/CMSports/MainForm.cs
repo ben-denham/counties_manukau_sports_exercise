@@ -62,6 +62,9 @@ namespace CMSports
             refreshOrganisationListView();
             refreshProgramListView();
             refreshEventListView();
+
+            // Open up a new school at the beginning.
+            newSchool();
         }
 
         private void mainTabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,17 +76,29 @@ namespace CMSports
                     {
                         populateOrganisationFields(activeOrganisation);
                     }
+                    else
+                    {
+                        newSchool();
+                    }
                     break;
                 case 1:
                     if (activeProgram != null)
                     {
                         populateProgramFields(activeProgram);
                     }
+                    else
+                    {
+                        newProgram();
+                    }
                     break;
                 case 2:
                     if (activeEvent != null)
                     {
                         populateEventFields(activeEvent);
+                    }
+                    else
+                    {
+                        newEvent();
                     }
                     break;
                 case 3:
@@ -168,7 +183,7 @@ namespace CMSports
             clearOrganisationFields();
         }
 
-        private void newSchoolButton_Click(object sender, EventArgs e)
+        private void newSchool()
         {
             Organisation newSchool = new School();
             organisations.Add(newSchool);
@@ -176,12 +191,22 @@ namespace CMSports
             populateOrganisationFields(newSchool);
         }
 
-        private void newClubButton_Click(object sender, EventArgs e)
+        private void newSchoolButton_Click(object sender, EventArgs e)
+        {
+            newSchool();
+        }
+
+        private void newClub()
         {
             Organisation newClub = new Club();
             organisations.Add(newClub);
             activeOrganisation = newClub;
             populateOrganisationFields(newClub);
+        }
+
+        private void newClubButton_Click(object sender, EventArgs e)
+        {
+            newClub();
         }
 
         private void organisationListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -268,12 +293,17 @@ namespace CMSports
             clearProgramFields();
         }
 
-        private void programNewButton_Click(object sender, EventArgs e)
+        private void newProgram()
         {
             Programme newProgram = new Programme();
             programs.Add(newProgram);
             activeProgram = newProgram;
             populateProgramFields(newProgram);
+        }
+
+        private void programNewButton_Click(object sender, EventArgs e)
+        {
+            newProgram();
         }
 
         private void programListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -381,12 +411,17 @@ namespace CMSports
             clearEventFields();
         }
 
-        private void eventNewButton_Click(object sender, EventArgs e)
+        private void newEvent()
         {
             Event newEvent = new Event();
             events.Add(newEvent);
             activeEvent = newEvent;
             populateEventFields(newEvent);
+        }
+
+        private void eventNewButton_Click(object sender, EventArgs e)
+        {
+            newEvent();
         }
 
         private void eventListView_SelectedIndexChanged(object sender, EventArgs e)
