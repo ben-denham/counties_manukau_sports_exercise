@@ -186,7 +186,6 @@ namespace CMSports
         private void newSchool()
         {
             Organisation newSchool = new School();
-            organisations.Add(newSchool);
             activeOrganisation = newSchool;
             populateOrganisationFields(newSchool);
         }
@@ -199,7 +198,6 @@ namespace CMSports
         private void newClub()
         {
             Organisation newClub = new Club();
-            organisations.Add(newClub);
             activeOrganisation = newClub;
             populateOrganisationFields(newClub);
         }
@@ -296,7 +294,6 @@ namespace CMSports
         private void newProgram()
         {
             Programme newProgram = new Programme();
-            programs.Add(newProgram);
             activeProgram = newProgram;
             populateProgramFields(newProgram);
         }
@@ -414,7 +411,6 @@ namespace CMSports
         private void newEvent()
         {
             Event newEvent = new Event();
-            events.Add(newEvent);
             activeEvent = newEvent;
             populateEventFields(newEvent);
         }
